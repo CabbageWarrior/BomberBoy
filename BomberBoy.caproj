@@ -18,7 +18,9 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -575,6 +577,9 @@
                 <behavior-type name="Solid" sid="605311750268660">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="Timer" sid="132900868094766">
+                    <behavior id="Timer" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="220671491227394" speed="5">
@@ -587,6 +592,9 @@
             <behaviors>
                 <behavior-type name="Solid" sid="873745086385178">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="231881126315795">
+                    <behavior id="Fade" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
