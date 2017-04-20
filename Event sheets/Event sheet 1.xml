@@ -253,6 +253,16 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-block sid="971442273339900">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="266734738070510" type="Player">
+                            <param id="0" name="Object">Fire</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="212875879378807" type="Player" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="902444318032506" title="BombActions">
@@ -269,6 +279,27 @@
                         </action>
                         <action id="-25" name="Move to bottom" sid="801680029279406" type="BombGrog" />
                         <action id="-25" name="Move to bottom" sid="593405999962707" type="BombPlaceholder" />
+                        <action id="-16" name="Wait" sid="854795933051239" type="System">
+                            <param id="0" name="Seconds">round(random(3, 5))</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="430167621323557" type="BombPlaceholder" />
+                        <action id="-9" name="Destroy" sid="806805936066889" type="BombGrog" />
+                        <action id="0" name="Spawn another object" sid="245753833961494" type="BombPlaceholder">
+                            <param id="0" name="Object">Fire</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="625396410049417">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="231651622608729" type="Fire">
+                            <param id="0" name="Object">BlockDestroyable</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="576629839606189" type="BlockDestroyable" />
+                        <action id="-9" name="Destroy" sid="315469995967927" type="Fire" />
                     </actions>
                 </event-block>
             </sub-events>
