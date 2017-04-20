@@ -8,14 +8,16 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3blxi9hzkyvjd</unique-id>
-    <saved-with-version>22100</saved-with-version>
+    <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -54,315 +56,225 @@
         </object-type>
         <object-type name="Block" sid="1100473757310958">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="3335304967159162">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7539217811729146" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Blocks\SolidBlock.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="1551385202413189">
+        <object-type name="BlockDestroyable" sid="1551385202413189">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="3850011878459706">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2433359036156505" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Blocks\ExplodableBlock.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Player" sid="7908487577636086">
+        <object-type name="PlayerGuybrush" sid="7908487577636086">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable comment="Number of the animation." name="Direction" sid="2056313289477382" type="number" />
-                <instance-variable comment="Player&apos;s speed" name="Speed" sid="4245871902376847" type="number" />
-                <instance-variable name="MoveTime" sid="4209187517061083" type="number" />
-                <instance-variable name="Timer" sid="4961488142014876" type="number" />
-                <instance-variable comment="Player ID." name="Player" sid="1014984070705807" type="number" />
-                <instance-variable name="ChessMovement" sid="1134804121200565" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="4Direction" sid="5466160657330695">
-                    <behavior id="EightDir" />
-                </behavior-type>
-                <behavior-type name="BoundToLayout" sid="2226542787530821">
-                    <behavior id="bound" />
-                </behavior-type>
-            </behaviors>
             <effects>
                 <effect-type name="ReplaceColor">
                     <effect id="replacecolor" />
                 </effect-type>
             </effects>
             <animation-folder>
-                <animation framecount="8" loop="1" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="7680904603129362" speed="16">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Front\Bman_F_f05.png">
+                <animation framecount="6" loop="1" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="7680904603129362" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Front\Bman_F_f00.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Front\Bman_F_f01.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Front\Bman_F_f02.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Front\Bman_F_f03.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Front\Bman_F_f04.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Front\Bman_F_f06.png">
-                        <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Front\Bman_F_f07.png">
-                        <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="8" loop="1" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="6613672703072947" speed="16">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Side\Bman_F_f00.png">
+                <animation framecount="6" loop="1" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="6613672703072947" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Side\Bman_F_f01.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Side\Bman_F_f02.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Side\Bman_F_f03.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Side\Bman_F_f04.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Side\Bman_F_f05.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Side\Bman_F_f06.png">
-                        <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Side\Bman_F_f07.png">
-                        <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="8" loop="1" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="3715046234799598" speed="16">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Back\Bman_B_f00.png">
+                <animation framecount="6" loop="1" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="3715046234799598" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Back\Bman_B_f01.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Back\Bman_B_f02.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Back\Bman_B_f03.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Back\Bman_B_f04.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Back\Bman_B_f05.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\guybrush.gif">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Back\Bman_B_f06.png">
-                        <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Bomberman\Back\Bman_B_f07.png">
-                        <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="8" loop="1" name="Left" pingpong="0" repeatcount="1" repeatto="0" sid="424398743284108" speed="16">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                <animation framecount="6" loop="1" name="Left" pingpong="0" repeatcount="1" repeatto="0" sid="555503096302147" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.734694">
                         <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <collision-poly>
-                            <point x="0.015625" y="0.507813" />
-                            <point x="0.984375" y="0.507813" />
-                            <point x="0.984375" y="0.992188" />
-                            <point x="0.015625" y="0.992188" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.469388" />
+                            <point x="0.882353" y="0.469388" />
+                            <point x="0.882353" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -371,8 +283,325 @@
         <object-type name="Keyboard" sid="9670848777871462">
             <plugin id="Keyboard" />
         </object-type>
+        <object-type name="PlayerLeChuck" sid="117867223478293">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="ReplaceColor">
+                    <effect id="replacecolor" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="8" loop="1" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="960075322519877" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="1" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="349431051045145" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="1" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="137117820102040" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.703125" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.703125" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.703125" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.703125" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.703125" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.703125" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.703125" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\lechuck.gif">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="1" name="Left" pingpong="0" repeatcount="1" repeatto="0" sid="441195245081507" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.698413">
+                        <collision-poly>
+                            <point x="0.175" y="0.396825" />
+                            <point x="0.825" y="0.396825" />
+                            <point x="0.825" y="1" />
+                            <point x="0.175" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayerFunctionManager" sid="914053800617214">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="BombGrog" sid="404759800435330">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="SineHeight" sid="108044812196044">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="SineVertical" sid="773802215102278">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="SineAngle" sid="963773010596392">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="SineHorizontal" sid="679755468157443">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="703581837012985" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501706" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\RandomAssets\grog.png">
+                        <collision-poly>
+                            <point x="0.113208" y="0.0921502" />
+                            <point x="0.518868" y="0.0238908" />
+                            <point x="0.834906" y="0.156997" />
+                            <point x="0.995283" y="0.508532" />
+                            <point x="0.806604" y="0.83959" />
+                            <point x="0.518868" y="0.996587" />
+                            <point x="0.0801887" y="0.948805" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Player" plugin-id="Sprite" sid="914913287938903">
+            <members>
+                <member>PlayerGuybrush</member>
+                <member>PlayerLeChuck</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Direction" sid="701376001369300" type="number" />
+                <instance-variable name="Speed" sid="237320373607734" type="number" />
+                <instance-variable name="MoveTime" sid="554101383060407" type="number" />
+                <instance-variable name="Timer" sid="897718626638136" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="993688096230872">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="4Direction" sid="542808202779814">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="SolidBlock" plugin-id="Sprite" sid="789548213747990">
+            <members>
+                <member>Block</member>
+                <member>BlockDestroyable</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Solid" sid="854715297449346">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder>
         <layout>Layout 1.xml</layout>
     </layout-folder>
@@ -381,6 +610,7 @@
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="90" />
+        <global-instance type="PlayerFunctionManager" uid="92" />
     </global-instances>
     <sounds-folder />
     <music-folder />
