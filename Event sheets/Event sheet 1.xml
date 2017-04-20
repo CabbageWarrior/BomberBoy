@@ -89,6 +89,10 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1769681718981619" title="Player2Controls">
+            <sub-events>
                 <event-block sid="1760746243824533">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="2081369203478638" type="Player">
