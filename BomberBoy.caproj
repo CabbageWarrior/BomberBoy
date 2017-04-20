@@ -10,6 +10,7 @@
     <unique-id>3blxi9hzkyvjd</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -567,6 +568,34 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="BombPlaceholder" sid="275769176283672">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="605311750268660">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="220671491227394" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Fire" sid="132712833537920">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160556419717681" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_f00.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_f01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_F02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_F03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_F04.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="BombListOfActives" sid="341070415450708">
+            <plugin id="Dictionary" />
         </object-type>
     </object-folder>
     <families>

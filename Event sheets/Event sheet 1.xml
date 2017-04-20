@@ -8,6 +8,7 @@
         <variable comment="Down Direction Angle." constant="1" name="DIR_DOWN" sid="514983525841942" static="0" type="number">90</variable>
         <variable comment="Left Direction Angle." constant="1" name="DIR_LEFT" sid="1788478983466851" static="0" type="number">180</variable>
         <variable comment="Up Direction Angle." constant="1" name="DIR_UP" sid="6668382114928825" static="0" type="number">270</variable>
+        <variable constant="1" name="GRID_CELL_DIMENSION" sid="977696802460946" static="0" type="number">64</variable>
         <event-group description="" sid="527473205940660" title="PlayerActions">
             <sub-events>
                 <event-group description="" sid="9745253451431713" title="Player1Controls">
@@ -123,11 +124,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="323939245941751" type="System">
-                                    <param id="0" name="Object to create">BombGrog</param>
-                                    <param id="1" name="Layer">1</param>
-                                    <param id="2" name="X">round((PlayerGuybrush.X - 32) / 64) * 64 + 32</param>
-                                    <param id="3" name="Y">round((PlayerGuybrush.Y - 32) / 64) * 64 + 32</param>
+                                <action id="0" name="Call function" sid="817993149191247" type="PlayerFunctionManager">
+                                    <param id="0" name="Name">&quot;PlaceBomb&quot;</param>
+                                    <param id="1" name="Parameter {n}">PlayerGuybrush.X{###}PlayerGuybrush.Y</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -246,16 +245,32 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="343559802311113" type="System">
-                                    <param id="0" name="Object to create">BombGrog</param>
-                                    <param id="1" name="Layer">1</param>
-                                    <param id="2" name="X">round((PlayerLeChuck.X - 32) / 64) * 64 + 32</param>
-                                    <param id="3" name="Y">round((PlayerLeChuck.Y - 32) / 64) * 64 + 32</param>
+                                <action id="0" name="Call function" sid="676010612548923" type="PlayerFunctionManager">
+                                    <param id="0" name="Name">&quot;PlaceBomb&quot;</param>
+                                    <param id="1" name="Parameter {n}">PlayerLeChuck.X{###}PlayerLeChuck.Y</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="902444318032506" title="BombActions">
+            <sub-events>
+                <event-block sid="807528452905428">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="224524213375146" type="BombPlaceholder" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="665250883234663" type="BombPlaceholder">
+                            <param id="0" name="Object">BombGrog</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="801680029279406" type="BombGrog" />
+                        <action id="-25" name="Move to bottom" sid="593405999962707" type="BombPlaceholder" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="286022578131322" title="Functions">
@@ -397,6 +412,47 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="549431850100100">
+                    <conditions>
+                        <condition id="0" name="On function" sid="725206544658269" type="PlayerFunctionManager">
+                            <param id="0" name="Name">&quot;PlaceBomb&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="580546508076359">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="222396230711730" type="BombListOfActives">
+                                    <param id="0" name="Key">PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;,PlayerFunctionManager.Param(0)) &amp; &quot;-&quot; &amp; PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;,PlayerFunctionManager.Param(1))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="289581820739292" type="BombListOfActives">
+                                    <param id="0" name="Key">PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;,PlayerFunctionManager.Param(0)) &amp; &quot;-&quot; &amp; PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;,PlayerFunctionManager.Param(1))</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="975659661393271" type="System">
+                                    <param id="0" name="Object to create">BombPlaceholder</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;,PlayerFunctionManager.Param(0))</param>
+                                    <param id="3" name="Y">PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;,PlayerFunctionManager.Param(1))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="275840947945462">
+                    <conditions>
+                        <condition id="0" name="On function" sid="613178228532473" type="PlayerFunctionManager">
+                            <param id="0" name="Name">&quot;GetSnappedCoord&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="174252753338584" type="PlayerFunctionManager">
+                            <param id="0" name="Value">round((PlayerFunctionManager.Param(0) - (GRID_CELL_DIMENSION / 2)) / GRID_CELL_DIMENSION) * GRID_CELL_DIMENSION + (GRID_CELL_DIMENSION / 2)</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
