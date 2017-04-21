@@ -17,7 +17,6 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
@@ -889,9 +888,6 @@
                 <instance-variable comment="Read this value from the object wich generates the bomb." name="BombRange" sid="792174226521795" type="number" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="Solid" sid="605311750268660">
-                    <behavior id="solid" />
-                </behavior-type>
                 <behavior-type name="Timer" sid="132900868094766">
                     <behavior id="Timer" />
                 </behavior-type>
@@ -984,13 +980,13 @@
                 <instance-variable name="MoveTime" sid="554101383060407" type="number" />
                 <instance-variable name="Timer" sid="897718626638136" type="number" />
                 <instance-variable comment="Number of fires around the bomb (0: only one generation point)." name="BombRange" sid="594982219639954" type="number" />
+                <instance-variable name="NextX" sid="353388136395068" type="number" />
+                <instance-variable name="NextY" sid="892968731554308" type="number" />
+                <instance-variable comment="1: Yes; 0: No." name="IsMoving" sid="557855840920625" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="993688096230872">
                     <behavior id="bound" />
-                </behavior-type>
-                <behavior-type name="4Direction" sid="542808202779814">
-                    <behavior id="EightDir" />
                 </behavior-type>
             </behaviors>
         </family>
@@ -998,6 +994,7 @@
             <members>
                 <member>Block</member>
                 <member>BlockDestroyable</member>
+                <member>BombPlaceholder</member>
             </members>
             <behaviors>
                 <behavior-type name="Solid" sid="854715297449346">
