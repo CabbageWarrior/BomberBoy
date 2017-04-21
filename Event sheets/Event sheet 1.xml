@@ -126,7 +126,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="817993149191247" type="PlayerFunctionManager">
                                     <param id="0" name="Name">&quot;PlaceBomb&quot;</param>
-                                    <param id="1" name="Parameter {n}">PlayerGuybrush.X{###}PlayerGuybrush.Y</param>
+                                    <param id="1" name="Parameter {n}">PlayerGuybrush.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -247,7 +247,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="676010612548923" type="PlayerFunctionManager">
                                     <param id="0" name="Name">&quot;PlaceBomb&quot;</param>
-                                    <param id="1" name="Parameter {n}">PlayerLeChuck.X{###}PlayerLeChuck.Y</param>
+                                    <param id="1" name="Parameter {n}">PlayerLeChuck.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -311,22 +311,22 @@
                         <action id="-9" name="Destroy" sid="546054102223023" type="BombPlaceholder" />
                     </actions>
                 </event-block>
-                <event-block sid="625396410049417">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="231651622608729" type="Fire">
-                            <param id="0" name="Object">BlockDestroyable</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="576629839606189" type="BlockDestroyable" />
-                        <action id="-9" name="Destroy" sid="315469995967927" type="Fire" />
-                    </actions>
-                </event-block>
                 <event-block sid="907064484571374">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="748284676581022" type="BombPlaceholder" />
+                        <condition id="-7" name="Compare instance variable" sid="868677725778207" type="BombPlaceholder">
+                            <param id="0" name="Instance variable">BombRange</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
+                        <action id="1" name="Append text" sid="721200677530219" type="DebugText">
+                            <param id="0" name="Text">&quot;   |   &quot;</param>
+                        </action>
+                        <action id="1" name="Append text" sid="834897432892461" type="DebugText">
+                            <param id="0" name="Text">&quot;BombRange: &quot; &amp; BombPlaceholder.BombRange &amp; &quot;   |   &quot;</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="806805936066889" type="BombGrog" />
                         <action id="2" name="Delete key" sid="988779710338514" type="BombListOfActives">
                             <param id="0" name="Key">BombPlaceholder.X &amp; &quot;-&quot; &amp; BombPlaceholder.Y</param>
@@ -337,11 +337,197 @@
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <variable comment="1: Yes; 0: No." constant="0" name="ProceedRight" sid="682763426543218" static="0" type="number">1</variable>
+                        <variable comment="1: Yes; 0: No." constant="0" name="ProceedDown" sid="652832409177748" static="0" type="number">1</variable>
+                        <variable comment="1: Yes; 0: No." constant="0" name="ProceedLeft" sid="906906057478466" static="0" type="number">1</variable>
+                        <variable comment="1: Yes; 0: No." constant="0" name="ProceedUp" sid="468418532598521" static="0" type="number">1</variable>
+                        <event-block sid="283436991912411">
+                            <conditions>
+                                <condition id="-10" name="For" sid="850583330209656" type="System">
+                                    <param id="0" name="Name">&quot;PlaceFires&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">BombPlaceholder.BombRange</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="142100409429972" type="DebugText">
+                                    <param id="0" name="Text">newline</param>
+                                </action>
+                                <action id="1" name="Append text" sid="243911092755788" type="DebugText">
+                                    <param id="0" name="Text">&quot;Right&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="354812179259913" type="DebugText">
+                                    <param id="0" name="Text">&quot; Loop Index: &quot; &amp; loopindex &amp; &quot;   |   &quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="694137260499219" type="System">
+                                    <param id="0" name="Variable">ProceedRight</param>
+                                    <param id="1" name="Value">PlayerFunctionManager.Call(&quot;CreateFireIfPossible&quot;, BombPlaceholder.X + (GRID_CELL_DIMENSION * loopindex), BombPlaceholder.Y)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="271561663702055">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="989366732435317" type="System">
+                                            <param id="0" name="Variable">ProceedRight</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" sid="756738158287941" type="DebugText">
+                                            <param id="0" name="Text">&quot;Stop Loop!&quot;</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="435891084830410" type="System" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="167469423170495">
+                            <conditions>
+                                <condition id="-10" name="For" sid="438905663972354" type="System">
+                                    <param id="0" name="Name">&quot;PlaceFires&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">BombPlaceholder.BombRange</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="147651651628687" type="DebugText">
+                                    <param id="0" name="Text">newline</param>
+                                </action>
+                                <action id="1" name="Append text" sid="549019251934101" type="DebugText">
+                                    <param id="0" name="Text">&quot;Down&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="545234299400711" type="DebugText">
+                                    <param id="0" name="Text">&quot; Loop Index: &quot; &amp; loopindex &amp; &quot;   |   &quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="145250160106766" type="System">
+                                    <param id="0" name="Variable">ProceedDown</param>
+                                    <param id="1" name="Value">PlayerFunctionManager.Call(&quot;CreateFireIfPossible&quot;, BombPlaceholder.X, BombPlaceholder.Y + (GRID_CELL_DIMENSION * loopindex))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="437488763530041">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="535236403198997" type="System">
+                                            <param id="0" name="Variable">ProceedDown</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" sid="575948920491796" type="DebugText">
+                                            <param id="0" name="Text">&quot;Stop Loop!&quot;</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="911360525742879" type="System" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="171431858214289">
+                            <conditions>
+                                <condition id="-10" name="For" sid="921681958906799" type="System">
+                                    <param id="0" name="Name">&quot;PlaceFires&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">BombPlaceholder.BombRange</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="565369718031103" type="DebugText">
+                                    <param id="0" name="Text">newline</param>
+                                </action>
+                                <action id="1" name="Append text" sid="589284272591438" type="DebugText">
+                                    <param id="0" name="Text">&quot;Left&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="103196554321904" type="DebugText">
+                                    <param id="0" name="Text">&quot; Loop Index: &quot; &amp; loopindex &amp; &quot;   |   &quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="531284321462193" type="System">
+                                    <param id="0" name="Variable">ProceedLeft</param>
+                                    <param id="1" name="Value">PlayerFunctionManager.Call(&quot;CreateFireIfPossible&quot;, BombPlaceholder.X - (GRID_CELL_DIMENSION * loopindex), BombPlaceholder.Y)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="850938008559933">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="787889034058709" type="System">
+                                            <param id="0" name="Variable">ProceedLeft</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" sid="593199836301075" type="DebugText">
+                                            <param id="0" name="Text">&quot;Stop Loop!&quot;</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="942679125344000" type="System" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="332507325950962">
+                            <conditions>
+                                <condition id="-10" name="For" sid="946416063396300" type="System">
+                                    <param id="0" name="Name">&quot;PlaceFires&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">BombPlaceholder.BombRange</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="867875275971008" type="DebugText">
+                                    <param id="0" name="Text">newline</param>
+                                </action>
+                                <action id="1" name="Append text" sid="645503252818185" type="DebugText">
+                                    <param id="0" name="Text">&quot;Up&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="510425203416409" type="DebugText">
+                                    <param id="0" name="Text">&quot; Loop Index: &quot; &amp; loopindex &amp; &quot;   |   &quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="589135747065213" type="System">
+                                    <param id="0" name="Variable">ProceedUp</param>
+                                    <param id="1" name="Value">PlayerFunctionManager.Call(&quot;CreateFireIfPossible&quot;, BombPlaceholder.X, BombPlaceholder.Y - (GRID_CELL_DIMENSION * loopindex))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="883534766080847">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="348715350428326" type="System">
+                                            <param id="0" name="Variable">ProceedUp</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Append text" sid="907813021114743" type="DebugText">
+                                            <param id="0" name="Text">&quot;Stop Loop!&quot;</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="503295130949085" type="System" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="286022578131322" title="Functions">
             <sub-events>
+                <event-group description="" sid="589194359271214" title="Utilities">
+                    <sub-events>
+                        <event-block sid="275840947945462">
+                            <conditions>
+                                <condition id="0" name="On function" sid="613178228532473" type="PlayerFunctionManager">
+                                    <param id="0" name="Name">&quot;GetSnappedCoord&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="174252753338584" type="PlayerFunctionManager">
+                                    <param id="0" name="Value">round((PlayerFunctionManager.Param(0) - (GRID_CELL_DIMENSION / 2)) / GRID_CELL_DIMENSION) * GRID_CELL_DIMENSION + (GRID_CELL_DIMENSION / 2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block sid="381783204327781">
                     <conditions>
                         <condition id="0" name="On function" sid="196938295340890" type="PlayerFunctionManager">
@@ -485,37 +671,150 @@
                         <condition id="0" name="On function" sid="725206544658269" type="PlayerFunctionManager">
                             <param id="0" name="Name">&quot;PlaceBomb&quot;</param>
                         </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="302779654072679" type="Player">
+                            <param id="0" name="Unique ID">PlayerFunctionManager.Param(0)</param>
+                        </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Set text" sid="785794271769580" type="DebugText">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="1" name="Append text" sid="275527538759425" type="DebugText">
+                            <param id="0" name="Text">&quot;Player BombRange: &quot; &amp; Player.BombRange &amp; &quot;   |   &quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="580546508076359">
                             <conditions>
                                 <condition id="3" inverted="1" name="Has key" sid="222396230711730" type="BombListOfActives">
-                                    <param id="0" name="Key">PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;,PlayerFunctionManager.Param(0)) &amp; &quot;-&quot; &amp; PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;,PlayerFunctionManager.Param(1))</param>
+                                    <param id="0" name="Key">PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;, Player.X) &amp; &quot;-&quot; &amp; PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;, Player.Y)</param>
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="1" name="Append text" sid="119085430849244" type="DebugText">
+                                    <param id="0" name="Text">&quot;AAAAAAAAAAA&quot; &amp; &quot;  |  &quot;</param>
+                                </action>
                                 <action id="-3" name="Create object" sid="975659661393271" type="System">
                                     <param id="0" name="Object to create">BombPlaceholder</param>
                                     <param id="1" name="Layer">1</param>
-                                    <param id="2" name="X">PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;,PlayerFunctionManager.Param(0))</param>
-                                    <param id="3" name="Y">PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;,PlayerFunctionManager.Param(1))</param>
+                                    <param id="2" name="X">PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;,Player.X)</param>
+                                    <param id="3" name="Y">PlayerFunctionManager.Call(&quot;GetSnappedCoord&quot;,Player.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="486044711465443" type="BombPlaceholder">
+                                    <param id="0" name="Instance variable">BombRange</param>
+                                    <param id="1" name="Value">Player.BombRange</param>
+                                </action>
+                                <action id="1" name="Append text" sid="195222663928260" type="DebugText">
+                                    <param id="0" name="Text">&quot;BBBBBBBBBBBB&quot; &amp; &quot;  |  &quot;</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="275840947945462">
+                <event-block sid="901412280680886">
                     <conditions>
-                        <condition id="0" name="On function" sid="613178228532473" type="PlayerFunctionManager">
-                            <param id="0" name="Name">&quot;GetSnappedCoord&quot;</param>
+                        <condition id="0" name="On function" sid="947939478521124" type="PlayerFunctionManager">
+                            <param id="0" name="Name">&quot;CreateFireIfPossible&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="174252753338584" type="PlayerFunctionManager">
-                            <param id="0" name="Value">round((PlayerFunctionManager.Param(0) - (GRID_CELL_DIMENSION / 2)) / GRID_CELL_DIMENSION) * GRID_CELL_DIMENSION + (GRID_CELL_DIMENSION / 2)</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="400562523342122">
+                            <conditions>
+                                <condition id="-36" name="Pick overlapping point" sid="668488878291201" type="System">
+                                    <param id="0" name="Object">Block</param>
+                                    <param id="1" name="X">PlayerFunctionManager.Param(0)</param>
+                                    <param id="2" name="Y">PlayerFunctionManager.Param(1)</param>
+                                </condition>
+                                <condition id="-31" name="Object UID exists" sid="835220999352930" type="System">
+                                    <param id="0" name="UID">Block.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="283726229750293" type="DebugText">
+                                    <param id="0" name="Text">&quot; --&gt; Location collides with block!&quot; &amp; &quot;   |   &quot;</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="757792078389987" type="PlayerFunctionManager">
+                                    <param id="0" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="589184878908716">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="889351791825336" type="System" />
+                                <condition id="-36" name="Pick overlapping point" sid="165557676970235" type="System">
+                                    <param id="0" name="Object">BlockDestroyable</param>
+                                    <param id="1" name="X">PlayerFunctionManager.Param(0)</param>
+                                    <param id="2" name="Y">PlayerFunctionManager.Param(1)</param>
+                                </condition>
+                                <condition id="-31" name="Object UID exists" sid="469240595444890" type="System">
+                                    <param id="0" name="UID">BlockDestroyable.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="342868123548887" type="DebugText">
+                                    <param id="0" name="Text">&quot; --&gt; Location collides with destroyable block!&quot; &amp; &quot;   |   &quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="869561642030064" type="BlockDestroyable" />
+                                <action id="-3" name="Create object" sid="731772780539187" type="System">
+                                    <param id="0" name="Object to create">Fire</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">PlayerFunctionManager.Param(0)</param>
+                                    <param id="3" name="Y">PlayerFunctionManager.Param(1)</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="685315870676327" type="PlayerFunctionManager">
+                                    <param id="0" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="999588541309965">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="280413265918299" type="System" />
+                                <condition id="-36" name="Pick overlapping point" sid="466834956960868" type="System">
+                                    <param id="0" name="Object">Fire</param>
+                                    <param id="1" name="X">PlayerFunctionManager.Param(0)</param>
+                                    <param id="2" name="Y">PlayerFunctionManager.Param(1)</param>
+                                </condition>
+                                <condition id="-31" name="Object UID exists" sid="761651875567812" type="System">
+                                    <param id="0" name="UID">Fire.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="888766841537086" type="DebugText">
+                                    <param id="0" name="Text">&quot; --&gt; Location collides with fire!&quot; &amp; &quot;   |   &quot;</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="144382349936729" type="Fire" />
+                                <action id="-3" name="Create object" sid="117205902879133" type="System">
+                                    <param id="0" name="Object to create">Fire</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">PlayerFunctionManager.Param(0)</param>
+                                    <param id="3" name="Y">PlayerFunctionManager.Param(1)</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="782081383522081" type="PlayerFunctionManager">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="543397212879433">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="340057394953463" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="171352916094641" type="DebugText">
+                                    <param id="0" name="Text">&quot; --&gt; No collisions!&quot; &amp; &quot;   |   &quot;</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="184029335714876" type="System">
+                                    <param id="0" name="Object to create">Fire</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">PlayerFunctionManager.Param(0)</param>
+                                    <param id="3" name="Y">PlayerFunctionManager.Param(1)</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="516498219446230" type="PlayerFunctionManager">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

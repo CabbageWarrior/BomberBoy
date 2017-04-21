@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -573,6 +574,9 @@
         </object-type>
         <object-type name="BombPlaceholder" sid="275769176283672">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Read this value from the object wich generates the bomb." name="BombRange" sid="792174226521795" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="605311750268660">
                     <behavior id="solid" />
@@ -583,12 +587,23 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="220671491227394" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="Fire" sid="132712833537920">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Number of fires to generate around." name="FiresToGenerate" sid="903893787565961" type="number" />
+                <instance-variable comment="Other fires generation direction." name="FiresGenerationDirection" sid="724343757575556" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="873745086385178">
                     <behavior id="solid" />
@@ -599,16 +614,54 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160556419717681" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_f00.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_f01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_F02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_F03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_F04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_f00.png">
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_f01.png">
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_F02.png">
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_F03.png">
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Lab 02 - Construct 2\0_CommonAssets\Sprites\Flame\Flame_F04.png">
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
         <object-type global="1" name="BombListOfActives" sid="341070415450708">
             <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="DebugText" sid="847503220148316">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>
@@ -622,6 +675,7 @@
                 <instance-variable name="Speed" sid="237320373607734" type="number" />
                 <instance-variable name="MoveTime" sid="554101383060407" type="number" />
                 <instance-variable name="Timer" sid="897718626638136" type="number" />
+                <instance-variable comment="Number of fires around the bomb (0: only one generation point)." name="BombRange" sid="594982219639954" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="993688096230872">
