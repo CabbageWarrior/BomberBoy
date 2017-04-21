@@ -5,10 +5,20 @@
     <events>
         <variable comment="Not moving." constant="1" name="DIR_NONE" sid="123122657249812" static="0" type="number">-1</variable>
         <variable comment="Right Direction Angle." constant="1" name="DIR_RIGHT" sid="7990774981750296" static="0" type="number">0</variable>
-        <variable comment="Down Direction Angle." constant="1" name="DIR_DOWN" sid="514983525841942" static="0" type="number">90</variable>
-        <variable comment="Left Direction Angle." constant="1" name="DIR_LEFT" sid="1788478983466851" static="0" type="number">180</variable>
-        <variable comment="Up Direction Angle." constant="1" name="DIR_UP" sid="6668382114928825" static="0" type="number">270</variable>
+        <variable comment="Down Direction Angle." constant="1" name="DIR_DOWN" sid="514983525841942" static="0" type="number">1</variable>
+        <variable comment="Left Direction Angle." constant="1" name="DIR_LEFT" sid="1788478983466851" static="0" type="number">2</variable>
+        <variable comment="Up Direction Angle." constant="1" name="DIR_UP" sid="6668382114928825" static="0" type="number">3</variable>
         <variable constant="1" name="GRID_CELL_DIMENSION" sid="977696802460946" static="0" type="number">64</variable>
+        <event-block sid="834520665838902">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="200225782010636" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="621505487134241" type="Player">
+                    <param id="0" name="Frame number">DIR_DOWN</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="527473205940660" title="PlayerActions">
             <sub-events>
                 <event-group description="" sid="9745253451431713" title="Player1Controls">
@@ -329,10 +339,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="245753833961494" type="BombPlaceholder">
-                            <param id="0" name="Object">Fire</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="Image point">0</param>
+                        <action id="0" name="Call function" sid="723416814663468" type="FunctionManager">
+                            <param id="0" name="Name">&quot;CreateFireIfPossible&quot;</param>
+                            <param id="1" name="Parameter {n}">BombPlaceholder.X{###}BombPlaceholder.Y</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -451,106 +460,125 @@
                         <condition id="0" name="On function" sid="196938295340890" type="FunctionManager">
                             <param id="0" name="Name">&quot;PlayerMove&quot;</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="612199234550356" type="Player">
-                            <param id="0" name="Unique ID">FunctionManager.Param(1)</param>
-                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" sid="782353258028893">
+                        <event-block sid="720724261125925">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="799491817652434" type="Player">
-                                    <param id="0" name="Instance variable">Direction</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">DIR_NONE</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="998657960264896" type="Player">
-                                    <param id="0" name="Instance variable">Direction</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">FunctionManager.Param(0)</param>
+                                <condition id="-24" name="For Each (ordered)" sid="589770289541470" type="System">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="Expression">Player.Y</param>
+                                    <param id="2" name="Order">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="462228883042541" type="Player">
-                                    <param id="0" name="Instance variable">Direction</param>
-                                    <param id="1" name="Value">FunctionManager.Param(0)</param>
-                                </action>
+                                <action id="-24" name="Move to top" sid="342800671444030" type="Player" />
                             </actions>
+                        </event-block>
+                        <event-block sid="193167033872723">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="612199234550356" type="Player">
+                                    <param id="0" name="Unique ID">FunctionManager.Param(1)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
                             <sub-events>
-                                <event-block sid="722558678670523">
+                                <event-block any="1" sid="782353258028893">
                                     <conditions>
-                                        <condition id="1" name="Compare parameter" sid="216219303019114" type="FunctionManager">
-                                            <param id="0" name="Index">0</param>
+                                        <condition id="-7" name="Compare instance variable" sid="799491817652434" type="Player">
+                                            <param id="0" name="Instance variable">Direction</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">DIR_RIGHT</param>
+                                            <param id="2" name="Value">DIR_NONE</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="998657960264896" type="Player">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">FunctionManager.Param(0)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="664374055151437" type="Player">
-                                            <param id="0" name="Animation">&quot;Right&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action behavior="4Direction" id="9" name="Set vector X" sid="713701481396131" type="Player">
-                                            <param id="0" name="Vector X">Self.Speed / Self.MoveTime</param>
+                                        <action id="-10" name="Set value" sid="462228883042541" type="Player">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">FunctionManager.Param(0)</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                                <event-block sid="822982541468424">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="144847563795171" type="System" />
-                                        <condition id="1" name="Compare parameter" sid="839513753398789" type="FunctionManager">
-                                            <param id="0" name="Index">0</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">DIR_DOWN</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="128741135354418" type="Player">
-                                            <param id="0" name="Animation">&quot;Front&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action behavior="4Direction" id="10" name="Set vector Y" sid="829947612520674" type="Player">
-                                            <param id="0" name="Vector Y">Self.Speed / Self.MoveTime</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="887653948198895">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="305614808257056" type="System" />
-                                        <condition id="1" name="Compare parameter" sid="900885177092609" type="FunctionManager">
-                                            <param id="0" name="Index">0</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">DIR_LEFT</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="866267643774560" type="Player">
-                                            <param id="0" name="Animation">&quot;Left&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action behavior="4Direction" id="9" name="Set vector X" sid="794433155937814" type="Player">
-                                            <param id="0" name="Vector X">-1 * Self.Speed / Self.MoveTime</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="490584365439276">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="746614091946259" type="System" />
-                                        <condition id="1" name="Compare parameter" sid="740377821594372" type="FunctionManager">
-                                            <param id="0" name="Index">0</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">DIR_UP</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="905490125434257" type="Player">
-                                            <param id="0" name="Animation">&quot;Back&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action behavior="4Direction" id="10" name="Set vector Y" sid="528343739119415" type="Player">
-                                            <param id="0" name="Vector Y">-1 * Self.Speed / Self.MoveTime</param>
-                                        </action>
-                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="722558678670523">
+                                            <conditions>
+                                                <condition id="1" name="Compare parameter" sid="216219303019114" type="FunctionManager">
+                                                    <param id="0" name="Index">0</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">DIR_RIGHT</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="664374055151437" type="Player">
+                                                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="4Direction" id="9" name="Set vector X" sid="713701481396131" type="Player">
+                                                    <param id="0" name="Vector X">Self.Speed / Self.MoveTime</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="822982541468424">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="144847563795171" type="System" />
+                                                <condition id="1" name="Compare parameter" sid="839513753398789" type="FunctionManager">
+                                                    <param id="0" name="Index">0</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">DIR_DOWN</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="128741135354418" type="Player">
+                                                    <param id="0" name="Animation">&quot;Front&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="4Direction" id="10" name="Set vector Y" sid="829947612520674" type="Player">
+                                                    <param id="0" name="Vector Y">Self.Speed / Self.MoveTime</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="887653948198895">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="305614808257056" type="System" />
+                                                <condition id="1" name="Compare parameter" sid="900885177092609" type="FunctionManager">
+                                                    <param id="0" name="Index">0</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">DIR_LEFT</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="866267643774560" type="Player">
+                                                    <param id="0" name="Animation">&quot;Left&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="4Direction" id="9" name="Set vector X" sid="794433155937814" type="Player">
+                                                    <param id="0" name="Vector X">-1 * Self.Speed / Self.MoveTime</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="490584365439276">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="746614091946259" type="System" />
+                                                <condition id="1" name="Compare parameter" sid="740377821594372" type="FunctionManager">
+                                                    <param id="0" name="Index">0</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">DIR_UP</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="905490125434257" type="Player">
+                                                    <param id="0" name="Animation">&quot;Back&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="4Direction" id="10" name="Set vector Y" sid="528343739119415" type="Player">
+                                                    <param id="0" name="Vector Y">-1 * Self.Speed / Self.MoveTime</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -576,7 +604,17 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="101073018275229" type="Player">
+                                <action behavior="4Direction" id="3" name="Set speed" sid="321538071017960" type="Player">
+                                    <param id="0" name="Speed">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="690613488308637" type="Player">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="407900697419744" type="Player">
+                                    <param id="0" name="Frame number">FunctionManager.Param(0)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="741477801904467" type="Player">
                                     <param id="0" name="Instance variable">Direction</param>
                                     <param id="1" name="Value">DIR_NONE</param>
                                 </action>
@@ -670,6 +708,7 @@
                                     <param id="2" name="X">FunctionManager.Param(0)</param>
                                     <param id="3" name="Y">FunctionManager.Param(1)</param>
                                 </action>
+                                <action id="-25" name="Move to bottom" sid="631470108544852" type="Fire" />
                                 <action id="1" name="Set return value" sid="685315870676327" type="FunctionManager">
                                     <param id="0" name="Value">0</param>
                                 </action>
@@ -711,6 +750,7 @@
                                     <param id="2" name="X">FunctionManager.Param(0)</param>
                                     <param id="3" name="Y">FunctionManager.Param(1)</param>
                                 </action>
+                                <action id="-25" name="Move to bottom" sid="910186405522429" type="Fire" />
                                 <action id="1" name="Set return value" sid="516498219446230" type="FunctionManager">
                                     <param id="0" name="Value">1</param>
                                 </action>
