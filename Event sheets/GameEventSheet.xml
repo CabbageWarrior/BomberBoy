@@ -1,0 +1,1225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEventSheet</name>
+    <events>
+        <variable comment="Not moving." constant="1" name="DIR_NONE" sid="123122657249812" static="0" type="number">-1</variable>
+        <variable comment="Right Direction Angle." constant="1" name="DIR_RIGHT" sid="7990774981750296" static="0" type="number">0</variable>
+        <variable comment="Down Direction Angle." constant="1" name="DIR_DOWN" sid="514983525841942" static="0" type="number">1</variable>
+        <variable comment="Left Direction Angle." constant="1" name="DIR_LEFT" sid="1788478983466851" static="0" type="number">2</variable>
+        <variable comment="Up Direction Angle." constant="1" name="DIR_UP" sid="6668382114928825" static="0" type="number">3</variable>
+        <variable constant="1" name="GRID_CELL_DIMENSION" sid="977696802460946" static="0" type="number">64</variable>
+        <event-block sid="834520665838902">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="200225782010636" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="621505487134241" type="Player">
+                    <param id="0" name="Frame number">DIR_DOWN</param>
+                </action>
+                <action id="-10" name="Set value" sid="285117576765526" type="Player">
+                    <param id="0" name="Instance variable">NextX</param>
+                    <param id="1" name="Value">Self.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="757374958490815" type="Player">
+                    <param id="0" name="Instance variable">NextY</param>
+                    <param id="1" name="Value">Self.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="600765194879062">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="658039692122020" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="845960978434433" type="DebugText">
+                    <param id="0" name="Text">&quot;Guybrush&quot; &amp; newline &amp; &quot; - Is Moving: &quot; &amp; PlayerGuybrush.IsMoving &amp; newline &amp; &quot; - Current Direction: &quot; &amp; PlayerGuybrush.Direction &amp; newline &amp; &quot; - Current X: &quot; &amp; PlayerGuybrush.X &amp; newline &amp; &quot; - Current Y: &quot; &amp; PlayerGuybrush.Y &amp; newline &amp; &quot; - Next X: &quot; &amp; PlayerGuybrush.NextX &amp; newline &amp; &quot; - Next Y: &quot; &amp; PlayerGuybrush.NextY &amp; newline &amp; newline &amp; &quot;Le Chuck&quot; &amp; newline &amp; &quot; - Is Moving: &quot; &amp; PlayerLeChuck.IsMoving &amp; newline &amp; &quot; - Current Direction: &quot; &amp; PlayerLeChuck.Direction &amp; newline &amp; &quot; - Current X: &quot; &amp; PlayerLeChuck.X &amp; newline &amp; &quot; - Current Y: &quot; &amp; PlayerLeChuck.Y &amp; newline &amp; &quot; - Next X: &quot; &amp; PlayerLeChuck.NextX &amp; newline &amp; &quot; - Next Y: &quot; &amp; PlayerLeChuck.NextY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="527473205940660" title="PlayerActions">
+            <sub-events>
+                <event-group description="" sid="9745253451431713" title="Player1Controls">
+                    <sub-events>
+                        <event-block sid="706741139280222">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Key is down" sid="729773006010567" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" sid="908258114730246" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" sid="376464984394226" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" sid="662784447712802" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="436469895091756" type="PlayerGuybrush">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="173526305948309">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="195138890368679" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6119445193882235">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="7557715739566571" type="Keyboard">
+                                            <param id="0" name="Key">68 (D)</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Key is down" sid="551237883454347" type="Keyboard">
+                                            <param id="0" name="Key">65 (A)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="215379724934199" type="FunctionManager">
+                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                            <param id="1" name="Parameter {n}">DIR_RIGHT{###}PlayerGuybrush.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7330281049707995">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="638128602520184" type="System" />
+                                        <condition id="2" name="Key is down" sid="1640617928021029" type="Keyboard">
+                                            <param id="0" name="Key">65 (A)</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Key is down" sid="148202799274981" type="Keyboard">
+                                            <param id="0" name="Key">68 (D)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="192848971965194" type="FunctionManager">
+                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                            <param id="1" name="Parameter {n}">DIR_LEFT{###}PlayerGuybrush.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="548778024386808">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="973128427767104" type="System" />
+                                        <condition id="2" name="Key is down" sid="547124762475644" type="Keyboard">
+                                            <param id="0" name="Key">68 (D)</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="933761509528191" type="Keyboard">
+                                            <param id="0" name="Key">65 (A)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="744253636267646" type="PlayerGuybrush">
+                                            <param id="0" name="Instance variable">IsMoving</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2052728357728262">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="3735616567536674" type="Keyboard">
+                                            <param id="0" name="Key">83 (S)</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Key is down" sid="305548144822267" type="Keyboard">
+                                            <param id="0" name="Key">87 (W)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="956300719067401" type="FunctionManager">
+                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                            <param id="1" name="Parameter {n}">DIR_DOWN{###}PlayerGuybrush.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9966895437349656">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="653059069369877" type="System" />
+                                        <condition id="2" name="Key is down" sid="7909980971822628" type="Keyboard">
+                                            <param id="0" name="Key">87 (W)</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Key is down" sid="651081005641559" type="Keyboard">
+                                            <param id="0" name="Key">83 (S)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="427041402204568" type="FunctionManager">
+                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                            <param id="1" name="Parameter {n}">DIR_UP{###}PlayerGuybrush.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="902675757424997">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="890854429058415" type="System" />
+                                        <condition id="2" name="Key is down" sid="790037549011897" type="Keyboard">
+                                            <param id="0" name="Key">83 (S)</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="953068622883981" type="Keyboard">
+                                            <param id="0" name="Key">87 (W)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="793003676172268" type="PlayerGuybrush">
+                                            <param id="0" name="Instance variable">IsMoving</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="692885924293359">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="446287528345776" type="Keyboard">
+                                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="817993149191247" type="FunctionManager">
+                                    <param id="0" name="Name">&quot;PlaceBomb&quot;</param>
+                                    <param id="1" name="Parameter {n}">PlayerGuybrush.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="1769681718981619" title="Player2Controls">
+                    <sub-events>
+                        <event-block sid="902879030885182">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Key is down" sid="641046680110375" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" sid="440028723823266" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" sid="748963052727234" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Key is down" sid="688028404453478" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="920882336598921" type="PlayerLeChuck">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="355049274869532">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="816487574195131" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7402483108330295">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="5264389745581447" type="Keyboard">
+                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Key is down" sid="658886389737063" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="356044093181554" type="FunctionManager">
+                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                            <param id="1" name="Parameter {n}">DIR_RIGHT{###}PlayerLeChuck.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9997214662711343">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="969767601758296" type="System" />
+                                        <condition id="2" name="Key is down" sid="7545381985826227" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Key is down" sid="955963871380414" type="Keyboard">
+                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="625698871381541" type="FunctionManager">
+                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                            <param id="1" name="Parameter {n}">DIR_LEFT{###}PlayerLeChuck.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="647354637649623">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="424768047528589" type="System" />
+                                        <condition id="2" name="Key is down" sid="301304977121906" type="Keyboard">
+                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="700747942671938" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="563367452315970" type="PlayerLeChuck">
+                                            <param id="0" name="Instance variable">IsMoving</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8025406258130754">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="2012178166784655" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Key is down" sid="740914856894772" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="419479157615226" type="FunctionManager">
+                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                            <param id="1" name="Parameter {n}">DIR_DOWN{###}PlayerLeChuck.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4335810245299648">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="986694066446156" type="System" />
+                                        <condition id="2" name="Key is down" sid="7219142663381127" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Key is down" sid="407523517763969" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="745900861811953" type="FunctionManager">
+                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                            <param id="1" name="Parameter {n}">DIR_UP{###}PlayerLeChuck.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="497100949651533">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="752482965312051" type="System" />
+                                        <condition id="2" name="Key is down" sid="938272940604069" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="383783965353341" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="556297496794748" type="PlayerLeChuck">
+                                            <param id="0" name="Instance variable">IsMoving</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="782336179310508">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="678742562867463" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="676010612548923" type="FunctionManager">
+                                    <param id="0" name="Name">&quot;PlaceBomb&quot;</param>
+                                    <param id="1" name="Parameter {n}">PlayerLeChuck.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="971442273339900">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="266734738070510" type="Player">
+                            <param id="0" name="Object">Fire</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="212875879378807" type="Player" />
+                    </actions>
+                </event-block>
+                <event-block sid="912475081186308">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="979904645268521" type="Player">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">DIR_RIGHT</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="993358875395157" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Self.NextX</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="466644711429069" type="Player">
+                            <param id="0" name="X">Self.X + (Self.Speed * dt / Self.MoveTime)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="270593151683529">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="404849442954550" type="Player">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">Self.NextX</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="425032604589973" type="Player">
+                                    <param id="0" name="X">Self.NextX</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="336051464871784">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="371526718680116" type="Player">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">DIR_DOWN</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="225415610219507" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Self.NextY</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="930092426684560" type="Player">
+                            <param id="0" name="Y">Self.Y + (Self.Speed * dt / Self.MoveTime)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="184080558217246">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="187052968445814" type="Player">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">Self.NextY</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="366829651763800" type="Player">
+                                    <param id="0" name="Y">Self.NextY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="851471355630555">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="725053068810895" type="Player">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">DIR_LEFT</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="854624120855000" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Self.NextX</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="415536364730965" type="Player">
+                            <param id="0" name="X">Self.X - (Self.Speed * dt / Self.MoveTime)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="878820067317773">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="821369811780730" type="Player">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">Self.NextX</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="368418998157177" type="Player">
+                                    <param id="0" name="X">Self.NextX</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="636384311590597">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="901460514390889" type="Player">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">DIR_UP</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="668272105121480" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">Self.NextY</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="197366202500722" type="Player">
+                            <param id="0" name="Y">Self.Y - (Self.Speed * dt / Self.MoveTime)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="767636838409755">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="723050577954262" type="Player">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">Self.NextY</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="681704323252643" type="Player">
+                                    <param id="0" name="Y">Self.NextY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="225141966513339">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="745307779233829" type="System">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="CurrentX" sid="120242224570441" static="0" type="number">-1</variable>
+                        <variable constant="0" name="CurrentY" sid="415617211134205" static="0" type="number">-1</variable>
+                        <event-block sid="341026788336249">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="159724468348913" type="Player">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="312438317992533" type="System">
+                                    <param id="0" name="Variable">CurrentX</param>
+                                    <param id="1" name="Value">Player.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="716967389956639" type="System">
+                                    <param id="0" name="Variable">CurrentY</param>
+                                    <param id="1" name="Value">Player.Y</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="880842963188145">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="611251488966113" type="System">
+                                            <param id="0" name="First value">(CurrentX % GRID_CELL_DIMENSION) - (GRID_CELL_DIMENSION / 2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="160457219525374" type="System">
+                                            <param id="0" name="First value">(CurrentY % GRID_CELL_DIMENSION) - (GRID_CELL_DIMENSION / 2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="155146053595769" type="FunctionManager">
+                                            <param id="0" name="Name">&quot;PlayerRemoveDirection&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.Direction{###}Player.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="902444318032506" title="BombActions">
+            <sub-events>
+                <event-block sid="807528452905428">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="224524213375146" type="BombPlaceholder" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="665250883234663" type="BombPlaceholder">
+                            <param id="0" name="Object">BombGrog</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="801680029279406" type="BombGrog" />
+                        <action id="-25" name="Move to bottom" sid="593405999962707" type="BombPlaceholder" />
+                        <action behavior="Timer" id="0" name="Start timer" sid="722315857283408" type="BombPlaceholder">
+                            <param id="0" name="Duration">round(random(3, 5))</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;BombExplode&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="625889294484553">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="357751321769431" type="BombPlaceholder">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="659222676152676" type="BombPlaceholder">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="391934344345676">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="839478250504735" type="BombPlaceholder">
+                            <param id="0" name="Tag">&quot;BombExplode&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="430167621323557" type="BombPlaceholder" />
+                    </actions>
+                </event-block>
+                <event-block sid="314968066723674">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="340039566206467" type="BombPlaceholder">
+                            <param id="0" name="Object">Fire</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="783907652637254" type="Fire" />
+                        <action id="-9" name="Destroy" sid="546054102223023" type="BombPlaceholder" />
+                    </actions>
+                </event-block>
+                <event-block sid="907064484571374">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="748284676581022" type="BombPlaceholder" />
+                        <condition id="-7" name="Compare instance variable" sid="868677725778207" type="BombPlaceholder">
+                            <param id="0" name="Instance variable">BombRange</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="723416814663468" type="FunctionManager">
+                            <param id="0" name="Name">&quot;CreateFireIfPossible&quot;</param>
+                            <param id="1" name="Parameter {n}">BombPlaceholder.X{###}BombPlaceholder.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="777163364527029">
+                            <conditions>
+                                <condition id="-36" name="Pick overlapping point" sid="137610312675689" type="System">
+                                    <param id="0" name="Object">BombGrog</param>
+                                    <param id="1" name="X">BombPlaceholder.X</param>
+                                    <param id="2" name="Y">BombPlaceholder.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="806805936066889" type="BombGrog" />
+                            </actions>
+                        </event-block>
+                        <variable comment="1: Yes; 0: No." constant="0" name="ProceedRight" sid="682763426543218" static="0" type="number">1</variable>
+                        <variable comment="1: Yes; 0: No." constant="0" name="ProceedDown" sid="652832409177748" static="0" type="number">1</variable>
+                        <variable comment="1: Yes; 0: No." constant="0" name="ProceedLeft" sid="906906057478466" static="0" type="number">1</variable>
+                        <variable comment="1: Yes; 0: No." constant="0" name="ProceedUp" sid="468418532598521" static="0" type="number">1</variable>
+                        <event-block sid="283436991912411">
+                            <conditions>
+                                <condition id="-10" name="For" sid="850583330209656" type="System">
+                                    <param id="0" name="Name">&quot;PlaceFires&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">BombPlaceholder.BombRange</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="271561663702055">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="989366732435317" type="System">
+                                            <param id="0" name="Variable">ProceedRight</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="661005171707943" type="System">
+                                            <param id="0" name="Variable">ProceedRight</param>
+                                            <param id="1" name="Value">FunctionManager.Call(&quot;CreateFireIfPossible&quot;, BombPlaceholder.X + (GRID_CELL_DIMENSION * loopindex), BombPlaceholder.Y)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="701892781888637">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="540461661790969" type="System">
+                                            <param id="0" name="Variable">ProceedDown</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="503038597740722" type="System">
+                                            <param id="0" name="Variable">ProceedDown</param>
+                                            <param id="1" name="Value">FunctionManager.Call(&quot;CreateFireIfPossible&quot;, BombPlaceholder.X, BombPlaceholder.Y + (GRID_CELL_DIMENSION * loopindex))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="372382247136575">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="286237375471920" type="System">
+                                            <param id="0" name="Variable">ProceedLeft</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="921430091606769" type="System">
+                                            <param id="0" name="Variable">ProceedLeft</param>
+                                            <param id="1" name="Value">FunctionManager.Call(&quot;CreateFireIfPossible&quot;, BombPlaceholder.X - (GRID_CELL_DIMENSION * loopindex), BombPlaceholder.Y)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="329295707563424">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="772941573843745" type="System">
+                                            <param id="0" name="Variable">ProceedUp</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="416571958804190" type="System">
+                                            <param id="0" name="Variable">ProceedUp</param>
+                                            <param id="1" name="Value">FunctionManager.Call(&quot;CreateFireIfPossible&quot;, BombPlaceholder.X, BombPlaceholder.Y - (GRID_CELL_DIMENSION * loopindex))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="286022578131322" title="Functions">
+            <sub-events>
+                <event-group description="" sid="589194359271214" title="Utilities">
+                    <sub-events>
+                        <event-block sid="275840947945462">
+                            <conditions>
+                                <condition id="0" name="On function" sid="613178228532473" type="FunctionManager">
+                                    <param id="0" name="Name">&quot;GetSnappedCoord&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="174252753338584" type="FunctionManager">
+                                    <param id="0" name="Value">round((FunctionManager.Param(0) - (GRID_CELL_DIMENSION / 2)) / GRID_CELL_DIMENSION) * GRID_CELL_DIMENSION + (GRID_CELL_DIMENSION / 2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="381783204327781">
+                    <conditions>
+                        <condition id="0" name="On function" sid="196938295340890" type="FunctionManager">
+                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="720724261125925">
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" sid="589770289541470" type="System">
+                                    <param id="0" name="Object">Player</param>
+                                    <param id="1" name="Expression">Player.Y</param>
+                                    <param id="2" name="Order">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-24" name="Move to top" sid="342800671444030" type="Player" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="193167033872723">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="612199234550356" type="Player">
+                                    <param id="0" name="Unique ID">FunctionManager.Param(1)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="685178139858540">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="834917727870298" type="Player">
+                                            <param id="0" name="Instance variable">IsMoving</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="503405168207233" type="Player">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">FunctionManager.Param(0)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="358364083924078" type="Player">
+                                            <param id="0" name="Instance variable">IsMoving</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="520863357086094">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="255048150369610" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="782353258028893">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="799491817652434" type="Player">
+                                                    <param id="0" name="Instance variable">Direction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">DIR_NONE</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="998657960264896" type="Player">
+                                                    <param id="0" name="Instance variable">Direction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">FunctionManager.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="462228883042541" type="Player">
+                                                    <param id="0" name="Instance variable">Direction</param>
+                                                    <param id="1" name="Value">FunctionManager.Param(0)</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="722558678670523">
+                                                    <conditions>
+                                                        <condition id="1" name="Compare parameter" sid="216219303019114" type="FunctionManager">
+                                                            <param id="0" name="Index">0</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">DIR_RIGHT</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="937698541204474" type="Player">
+                                                            <param id="0" name="Instance variable">NextX</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Value">Self.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="505193787753622">
+                                                            <conditions>
+                                                                <condition id="-36" name="Pick overlapping point" sid="303720468604602" type="System">
+                                                                    <param id="0" name="Object">SolidBlock</param>
+                                                                    <param id="1" name="X">Player.NextX + GRID_CELL_DIMENSION</param>
+                                                                    <param id="2" name="Y">Player.NextY</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="253422622884547" type="FunctionManager">
+                                                                    <param id="0" name="Name">&quot;PlayerRemoveDirection&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Player.Direction{###}Player.UID</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="180903158558600">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="992975253049186" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="667891960834614" type="Player">
+                                                                    <param id="0" name="Instance variable">IsMoving</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="953371188860055" type="Player">
+                                                                    <param id="0" name="Instance variable">NextX</param>
+                                                                    <param id="1" name="Value">Self.NextX + GRID_CELL_DIMENSION</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="752453469737094">
+                                                                    <conditions>
+                                                                        <condition id="2" inverted="1" name="Is playing" sid="467659934014958" type="Player">
+                                                                            <param id="0" name="Animation">&quot;Right&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="664374055151437" type="Player">
+                                                                            <param id="0" name="Animation">&quot;Right&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="822982541468424">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="144847563795171" type="System" />
+                                                        <condition id="1" name="Compare parameter" sid="839513753398789" type="FunctionManager">
+                                                            <param id="0" name="Index">0</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">DIR_DOWN</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="333429696213604" type="Player">
+                                                            <param id="0" name="Instance variable">NextY</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Value">Self.Y</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="213772994143059">
+                                                            <conditions>
+                                                                <condition id="-36" name="Pick overlapping point" sid="615052168813124" type="System">
+                                                                    <param id="0" name="Object">SolidBlock</param>
+                                                                    <param id="1" name="X">Player.NextX</param>
+                                                                    <param id="2" name="Y">Player.NextY + GRID_CELL_DIMENSION</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="815139976414827" type="FunctionManager">
+                                                                    <param id="0" name="Name">&quot;PlayerRemoveDirection&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Player.Direction{###}Player.UID</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="750194699950587">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="735954945763822" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="932278865202977" type="Player">
+                                                                    <param id="0" name="Instance variable">IsMoving</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="780012365745162" type="Player">
+                                                                    <param id="0" name="Instance variable">NextY</param>
+                                                                    <param id="1" name="Value">Self.NextY + GRID_CELL_DIMENSION</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="961174020030840">
+                                                                    <conditions>
+                                                                        <condition id="2" inverted="1" name="Is playing" sid="610039603804916" type="Player">
+                                                                            <param id="0" name="Animation">&quot;Front&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="128741135354418" type="Player">
+                                                                            <param id="0" name="Animation">&quot;Front&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="887653948198895">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="305614808257056" type="System" />
+                                                        <condition id="1" name="Compare parameter" sid="900885177092609" type="FunctionManager">
+                                                            <param id="0" name="Index">0</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">DIR_LEFT</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="668398528237498" type="Player">
+                                                            <param id="0" name="Instance variable">NextX</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Value">Self.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="448531958153326">
+                                                            <conditions>
+                                                                <condition id="-36" name="Pick overlapping point" sid="455974114219894" type="System">
+                                                                    <param id="0" name="Object">SolidBlock</param>
+                                                                    <param id="1" name="X">Player.NextX - GRID_CELL_DIMENSION</param>
+                                                                    <param id="2" name="Y">Player.NextY</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="878335608109552" type="FunctionManager">
+                                                                    <param id="0" name="Name">&quot;PlayerRemoveDirection&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Player.Direction{###}Player.UID</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="254444404925881">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="237611665193787" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="908182160814377" type="Player">
+                                                                    <param id="0" name="Instance variable">IsMoving</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="136562710813795" type="Player">
+                                                                    <param id="0" name="Instance variable">NextX</param>
+                                                                    <param id="1" name="Value">Self.NextX - GRID_CELL_DIMENSION</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="896382290146570">
+                                                                    <conditions>
+                                                                        <condition id="2" inverted="1" name="Is playing" sid="982662856786079" type="Player">
+                                                                            <param id="0" name="Animation">&quot;Left&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="866267643774560" type="Player">
+                                                                            <param id="0" name="Animation">&quot;Left&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="490584365439276">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="746614091946259" type="System" />
+                                                        <condition id="1" name="Compare parameter" sid="740377821594372" type="FunctionManager">
+                                                            <param id="0" name="Index">0</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">DIR_UP</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="177273087180659" type="Player">
+                                                            <param id="0" name="Instance variable">NextY</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Value">Self.Y</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="860092298701150">
+                                                            <conditions>
+                                                                <condition id="-36" name="Pick overlapping point" sid="553728933076111" type="System">
+                                                                    <param id="0" name="Object">SolidBlock</param>
+                                                                    <param id="1" name="X">Player.NextX</param>
+                                                                    <param id="2" name="Y">Player.NextY - GRID_CELL_DIMENSION</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="893166673824259" type="FunctionManager">
+                                                                    <param id="0" name="Name">&quot;PlayerRemoveDirection&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Player.Direction{###}Player.UID</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="922343843906845">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="169953874432804" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="762697716915777" type="Player">
+                                                                    <param id="0" name="Instance variable">IsMoving</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="659713708203584" type="Player">
+                                                                    <param id="0" name="Instance variable">NextY</param>
+                                                                    <param id="1" name="Value">Self.NextY - GRID_CELL_DIMENSION</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="302124821518863">
+                                                                    <conditions>
+                                                                        <condition id="2" inverted="1" name="Is playing" sid="117258530886129" type="Player">
+                                                                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="905490125434257" type="Player">
+                                                                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="786337930768131">
+                    <conditions>
+                        <condition id="0" name="On function" sid="288775142042453" type="FunctionManager">
+                            <param id="0" name="Name">&quot;PlayerRemoveDirection&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="596181255943408" type="Player">
+                            <param id="0" name="Unique ID">FunctionManager.Param(1)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="897956087835678">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="369360525063132" type="Player">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">DIR_NONE</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="662473029480326" type="Player">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">FunctionManager.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="690613488308637" type="Player">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="407900697419744" type="Player">
+                                    <param id="0" name="Frame number">FunctionManager.Param(0)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="741477801904467" type="Player">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Value">DIR_NONE</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="549431850100100">
+                    <conditions>
+                        <condition id="0" name="On function" sid="725206544658269" type="FunctionManager">
+                            <param id="0" name="Name">&quot;PlaceBomb&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="302779654072679" type="Player">
+                            <param id="0" name="Unique ID">FunctionManager.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Non faccio un semplice &quot;Invert&quot; sulla prima condizione perché il risultato non è lo stesso.</comment>
+                        <event-block sid="580546508076359">
+                            <conditions>
+                                <condition id="-36" name="Pick overlapping point" sid="165802568689770" type="System">
+                                    <param id="0" name="Object">BombPlaceholder</param>
+                                    <param id="1" name="X">FunctionManager.Call(&quot;GetSnappedCoord&quot;,Player.X)</param>
+                                    <param id="2" name="Y">FunctionManager.Call(&quot;GetSnappedCoord&quot;,Player.Y)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="820382636641603">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="791217671731128" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="975659661393271" type="System">
+                                    <param id="0" name="Object to create">BombPlaceholder</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">FunctionManager.Call(&quot;GetSnappedCoord&quot;,Player.X)</param>
+                                    <param id="3" name="Y">FunctionManager.Call(&quot;GetSnappedCoord&quot;,Player.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="486044711465443" type="BombPlaceholder">
+                                    <param id="0" name="Instance variable">BombRange</param>
+                                    <param id="1" name="Value">Player.BombRange</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="901412280680886">
+                    <conditions>
+                        <condition id="0" name="On function" sid="947939478521124" type="FunctionManager">
+                            <param id="0" name="Name">&quot;CreateFireIfPossible&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="400562523342122">
+                            <conditions>
+                                <condition id="-36" name="Pick overlapping point" sid="668488878291201" type="System">
+                                    <param id="0" name="Object">Block</param>
+                                    <param id="1" name="X">FunctionManager.Param(0)</param>
+                                    <param id="2" name="Y">FunctionManager.Param(1)</param>
+                                </condition>
+                                <condition id="-31" name="Object UID exists" sid="835220999352930" type="System">
+                                    <param id="0" name="UID">Block.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="757792078389987" type="FunctionManager">
+                                    <param id="0" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="589184878908716">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="889351791825336" type="System" />
+                                <condition id="-36" name="Pick overlapping point" sid="165557676970235" type="System">
+                                    <param id="0" name="Object">BlockDestroyable</param>
+                                    <param id="1" name="X">FunctionManager.Param(0)</param>
+                                    <param id="2" name="Y">FunctionManager.Param(1)</param>
+                                </condition>
+                                <condition id="-31" name="Object UID exists" sid="469240595444890" type="System">
+                                    <param id="0" name="UID">BlockDestroyable.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="869561642030064" type="BlockDestroyable" />
+                                <action id="-3" name="Create object" sid="731772780539187" type="System">
+                                    <param id="0" name="Object to create">Fire</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">FunctionManager.Param(0)</param>
+                                    <param id="3" name="Y">FunctionManager.Param(1)</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="631470108544852" type="Fire" />
+                                <action id="1" name="Set return value" sid="685315870676327" type="FunctionManager">
+                                    <param id="0" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="999588541309965">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="280413265918299" type="System" />
+                                <condition id="-36" name="Pick overlapping point" sid="466834956960868" type="System">
+                                    <param id="0" name="Object">Fire</param>
+                                    <param id="1" name="X">FunctionManager.Param(0)</param>
+                                    <param id="2" name="Y">FunctionManager.Param(1)</param>
+                                </condition>
+                                <condition id="-31" name="Object UID exists" sid="761651875567812" type="System">
+                                    <param id="0" name="UID">Fire.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="144382349936729" type="Fire" />
+                                <action id="-3" name="Create object" sid="117205902879133" type="System">
+                                    <param id="0" name="Object to create">Fire</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">FunctionManager.Param(0)</param>
+                                    <param id="3" name="Y">FunctionManager.Param(1)</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="782081383522081" type="FunctionManager">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="543397212879433">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="340057394953463" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="184029335714876" type="System">
+                                    <param id="0" name="Object to create">Fire</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">FunctionManager.Param(0)</param>
+                                    <param id="3" name="Y">FunctionManager.Param(1)</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="910186405522429" type="Fire" />
+                                <action id="1" name="Set return value" sid="516498219446230" type="FunctionManager">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
