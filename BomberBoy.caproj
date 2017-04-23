@@ -968,7 +968,7 @@
         <object-type name="DebugText" sid="847503220148316">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Sprite" sid="745894879413673">
+        <object-type name="IntroStanStanman" sid="745894879413673">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="9" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664838861115616" speed="8">
@@ -1079,17 +1079,14 @@
         </object-type>
         <object-type name="TiledBackground2" sid="472219365290669">
             <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Fade" sid="545045990618644">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <texture />
         </object-type>
-        <object-type name="TiledBackground3" sid="168087138461354">
-            <plugin id="TiledBg" />
-            <texture original-source="D:\rverz\Pictures\56866281-monkey-island-wallpapers.jpg" />
-        </object-type>
-        <object-type name="TiledBackground4" sid="803750219934902">
-            <plugin id="TiledBg" />
-            <texture original-source="D:\rverz\Pictures\bgtest1.jpg" />
-        </object-type>
-        <object-type name="Sprite2" sid="449894353565694">
+        <object-type name="IntroFirstPlanSprite" sid="449894353565694">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="999033832416687" speed="5">
@@ -1097,8 +1094,19 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="751182219484339">
+        <object-type name="GameTitle" sid="751182219484339">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="SizeSine" sid="508433946677110">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="VerticalSine" sid="683010078554423">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="HorizontalSine" sid="753978164132234">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373378025935664" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\rverz\Pictures\logone.png">
@@ -1116,15 +1124,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite4" sid="410415372872702">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="239466608670333" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite5" sid="976023181748532">
+        <object-type name="IntroGuybrush" sid="976023181748532">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499156461343610" speed="5">
@@ -1143,7 +1143,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite6" sid="580486861733184">
+        <object-type name="IntroLeChuck" sid="580486861733184">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="862873925018011" speed="5">
@@ -1162,7 +1162,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite7" sid="556534314894730">
+        <object-type name="IntroBackground" sid="556534314894730">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="138590614079290" speed="5">
@@ -1170,7 +1170,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="9patch" sid="139034713120365">
+        <object-type name="TextBackground9patch" sid="139034713120365">
             <plugin id="NinePatch" />
             <texture />
         </object-type>

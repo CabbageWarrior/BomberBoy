@@ -12,6 +12,31 @@
                     <param id="0" name="Family name">&quot;monkey_island_1991_refinedRg&quot;</param>
                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                 </action>
+                <action id="-16" name="Wait" sid="648917271332544" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action behavior="SizeSine" id="0" name="Set active" sid="730323911910895" type="GameTitle">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="VerticalSine" id="0" name="Set active" sid="281310896787805" type="GameTitle">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="HorizontalSine" id="0" name="Set active" sid="623656697690671" type="GameTitle">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="213627244635340" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action behavior="SizeSine" id="0" name="Set active" sid="144569851217570" type="GameTitle">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="VerticalSine" id="0" name="Set active" sid="136405181253852" type="GameTitle">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="HorizontalSine" id="0" name="Set active" sid="147692575970345" type="GameTitle">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="644186302365070" type="TiledBackground2" />
             </actions>
         </event-block>
     </events>

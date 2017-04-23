@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sprite7" uid="104">
+                <instance type="IntroBackground" uid="104">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="9patch" uid="106">
+                <instance type="TextBackground9patch" uid="106">
                     <properties>
                         <left-margin>16</left-margin>
                         <right-margin>16</right-margin>
@@ -96,7 +96,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="97">
+                <instance type="IntroStanStanman" uid="97">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -145,29 +145,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite3" uid="100">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>185.454620361</x>
-                        <y>171.875762939</y>
-                        <z>0</z>
-                        <width>316.909240723</width>
-                        <height>145.75151062</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite5" uid="101">
+                <instance type="IntroGuybrush" uid="101">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -189,7 +167,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite6" uid="102">
+                <instance type="IntroLeChuck" uid="102">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -211,7 +189,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite2" uid="103">
+                <instance type="IntroFirstPlanSprite" uid="103">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -235,7 +213,7 @@
                 </instance>
                 <instance type="HudText" uid="99">
                     <properties>
-                        <text>I am Guybrush Threepwood, mighty pirate. I use WASD Keys and Enter!</text>
+                        <text>I am Guybrush Threepwood, mighty pirate. I use WASD Keys and Space Bar!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-13.6,400,0</font>
                         <color>255,255,255</color>
@@ -262,7 +240,7 @@
                 </instance>
                 <instance type="HudText" uid="105">
                     <properties>
-                        <text>I&apos;m the dead zombie pirate Le Chuck! I use Arrow Keys and Space Bar!</text>
+                        <text>I&apos;m the dead zombie pirate Le Chuck! I use Arrow Keys and Enter!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-13.6,400,0</font>
                         <color>255,255,255</color>
@@ -283,6 +261,100 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TiledBackground2" uid="108">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>640</width>
+                        <height>640</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GameTitle" uid="107">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SizeSine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Size</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>2</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>260</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="VerticalSine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>2</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>170</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="HorizontalSine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>2</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>133</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>320</y>
+                        <z>0</z>
+                        <width>563.374572754</width>
+                        <height>259.311523438</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
