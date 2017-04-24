@@ -9,6 +9,8 @@
         <variable comment="Left Direction Angle." constant="1" name="DIR_LEFT" sid="1788478983466851" static="0" type="number">2</variable>
         <variable comment="Up Direction Angle." constant="1" name="DIR_UP" sid="6668382114928825" static="0" type="number">3</variable>
         <variable constant="1" name="GRID_CELL_DIMENSION" sid="977696802460946" static="0" type="number">64</variable>
+        <variable constant="0" name="IsGamePaused" sid="510171410730064" static="0" type="number">0</variable>
+        <variable constant="0" name="IsGameFinished" sid="920338402387444" static="0" type="number">0</variable>
         <event-block sid="834520665838902">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="200225782010636" type="System" />
@@ -26,6 +28,10 @@
                     <param id="0" name="Instance variable">NextY</param>
                     <param id="1" name="Value">Self.Y</param>
                 </action>
+                <action id="5" name="Set web font" sid="598478208246350" type="TextMonkeyIsland">
+                    <param id="0" name="Family name">&quot;monkey_island_1991_refinedRg&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
                 <action id="0" name="Play" sid="884234037821487" type="Audio">
                     <param id="0" name="Audio file">14_-_Monkey_Island</param>
                     <param id="2" name="Loop">1</param>
@@ -41,6 +47,99 @@
             <actions>
                 <action id="0" name="Set text" sid="845960978434433" type="DebugText">
                     <param id="0" name="Text">&quot;Guybrush&quot; &amp; newline &amp; &quot; - Is Moving: &quot; &amp; PlayerGuybrush.IsMoving &amp; newline &amp; &quot; - Current Direction: &quot; &amp; PlayerGuybrush.Direction &amp; newline &amp; &quot; - Current X: &quot; &amp; PlayerGuybrush.X &amp; newline &amp; &quot; - Current Y: &quot; &amp; PlayerGuybrush.Y &amp; newline &amp; &quot; - Next X: &quot; &amp; PlayerGuybrush.NextX &amp; newline &amp; &quot; - Next Y: &quot; &amp; PlayerGuybrush.NextY &amp; newline &amp; newline &amp; &quot;Le Chuck&quot; &amp; newline &amp; &quot; - Is Moving: &quot; &amp; PlayerLeChuck.IsMoving &amp; newline &amp; &quot; - Current Direction: &quot; &amp; PlayerLeChuck.Direction &amp; newline &amp; &quot; - Current X: &quot; &amp; PlayerLeChuck.X &amp; newline &amp; &quot; - Current Y: &quot; &amp; PlayerLeChuck.Y &amp; newline &amp; &quot; - Next X: &quot; &amp; PlayerLeChuck.NextX &amp; newline &amp; &quot; - Next Y: &quot; &amp; PlayerLeChuck.NextY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="536806550654422">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="152295726860942" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="461297211012981">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="794982785908108" type="System">
+                            <param id="0" name="Variable">IsGamePaused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="117839186701451" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="322662186677390" type="System">
+                            <param id="0" name="Group name">&quot;PlayerActions&quot;</param>
+                            <param id="1" name="State">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="516513944123052" type="TextBackground9patch">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="486661334282963" type="Chicken">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="788881585848336" type="HudTextGamePaused">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="985570793941882" type="HudTextGameActive">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="494327073821385" type="System">
+                            <param id="0" name="Variable">IsGamePaused</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="409436059042428">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="908712894020383" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="233886688627391" type="System">
+                            <param id="0" name="Group name">&quot;PlayerActions&quot;</param>
+                            <param id="1" name="State">2</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="578443722261682" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="289613328215706" type="TextBackground9patch">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="475739864567231" type="Chicken">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="644853987934107" type="HudTextGamePaused">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="698002355502510" type="HudTextGameActive">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="780430236939159" type="System">
+                            <param id="0" name="Variable">IsGamePaused</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="211819341224540">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="843928624504515" type="System">
+                    <param id="0" name="Variable">IsGameFinished</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="511993952426150" type="System">
+                    <param id="0" name="Group name">&quot;BombActions&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="632369933467752" type="System">
+                    <param id="0" name="Group name">&quot;PlayerActions&quot;</param>
+                    <param id="1" name="State">0</param>
                 </action>
             </actions>
         </event-block>
@@ -348,6 +447,13 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="212875879378807" type="Player" />
+                        <action id="-16" name="Wait" sid="267680075496058" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="495740029850425" type="System">
+                            <param id="0" name="Variable">IsGameFinished</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="912475081186308">

@@ -105,7 +105,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -121,8 +121,8 @@
                         <x>32</x>
                         <y>32</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -134,7 +134,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -150,8 +150,8 @@
                         <x>96</x>
                         <y>32</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -163,7 +163,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -179,8 +179,8 @@
                         <x>160</x>
                         <y>32</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -192,7 +192,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -208,8 +208,8 @@
                         <x>224</x>
                         <y>32</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -221,7 +221,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -237,8 +237,8 @@
                         <x>288</x>
                         <y>32</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -250,7 +250,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -266,8 +266,8 @@
                         <x>352</x>
                         <y>32</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -279,7 +279,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -295,8 +295,8 @@
                         <x>416</x>
                         <y>32</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -308,7 +308,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -324,8 +324,8 @@
                         <x>480</x>
                         <y>32</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -337,7 +337,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -353,8 +353,8 @@
                         <x>544</x>
                         <y>32</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -366,7 +366,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -382,8 +382,8 @@
                         <x>608</x>
                         <y>32</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -395,7 +395,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -411,8 +411,8 @@
                         <x>32</x>
                         <y>96</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -424,7 +424,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -440,8 +440,8 @@
                         <x>608</x>
                         <y>96</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -453,7 +453,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -469,8 +469,8 @@
                         <x>32</x>
                         <y>160</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -482,7 +482,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -498,8 +498,8 @@
                         <x>608</x>
                         <y>160</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -511,7 +511,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -527,8 +527,8 @@
                         <x>32</x>
                         <y>224</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -540,7 +540,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -556,8 +556,8 @@
                         <x>608</x>
                         <y>224</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -569,7 +569,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -585,8 +585,8 @@
                         <x>32</x>
                         <y>288</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -598,7 +598,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -614,8 +614,8 @@
                         <x>608</x>
                         <y>288</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -627,7 +627,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -643,8 +643,8 @@
                         <x>32</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -656,7 +656,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -672,8 +672,8 @@
                         <x>608</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -685,7 +685,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -701,8 +701,8 @@
                         <x>32</x>
                         <y>416</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -714,7 +714,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -730,8 +730,8 @@
                         <x>608</x>
                         <y>416</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -743,7 +743,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -759,8 +759,8 @@
                         <x>32</x>
                         <y>480</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -772,7 +772,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -788,8 +788,8 @@
                         <x>608</x>
                         <y>480</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -801,7 +801,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -817,8 +817,8 @@
                         <x>32</x>
                         <y>544</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -830,7 +830,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -846,8 +846,8 @@
                         <x>608</x>
                         <y>544</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -859,7 +859,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -875,8 +875,8 @@
                         <x>32</x>
                         <y>608</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -888,7 +888,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -904,8 +904,8 @@
                         <x>608</x>
                         <y>608</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -917,7 +917,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -933,8 +933,8 @@
                         <x>96</x>
                         <y>608</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -946,7 +946,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -962,8 +962,8 @@
                         <x>160</x>
                         <y>608</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -975,7 +975,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -991,8 +991,8 @@
                         <x>224</x>
                         <y>608</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1004,7 +1004,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1020,8 +1020,8 @@
                         <x>288</x>
                         <y>608</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1033,7 +1033,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1049,8 +1049,8 @@
                         <x>352</x>
                         <y>608</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1062,7 +1062,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1078,8 +1078,8 @@
                         <x>416</x>
                         <y>608</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1091,7 +1091,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1107,8 +1107,8 @@
                         <x>480</x>
                         <y>608</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1120,7 +1120,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1136,8 +1136,8 @@
                         <x>544</x>
                         <y>608</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1149,7 +1149,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1165,8 +1165,8 @@
                         <x>160</x>
                         <y>160</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1178,7 +1178,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1194,8 +1194,8 @@
                         <x>224</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1207,7 +1207,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1223,8 +1223,8 @@
                         <x>288</x>
                         <y>544</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1236,7 +1236,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1252,8 +1252,8 @@
                         <x>416</x>
                         <y>480</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1265,7 +1265,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1281,8 +1281,8 @@
                         <x>480</x>
                         <y>224</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1294,7 +1294,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1310,8 +1310,8 @@
                         <x>352</x>
                         <y>160</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1323,7 +1323,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1339,8 +1339,8 @@
                         <x>352</x>
                         <y>288</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1352,7 +1352,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1368,8 +1368,8 @@
                         <x>224</x>
                         <y>224</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1381,7 +1381,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1397,8 +1397,8 @@
                         <x>160</x>
                         <y>480</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1410,7 +1410,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1426,8 +1426,8 @@
                         <x>480</x>
                         <y>416</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1439,7 +1439,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1455,8 +1455,8 @@
                         <x>480</x>
                         <y>160</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1468,7 +1468,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1484,8 +1484,8 @@
                         <x>352</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1497,7 +1497,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1513,8 +1513,8 @@
                         <x>224</x>
                         <y>416</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1526,7 +1526,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1542,8 +1542,8 @@
                         <x>480</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1555,7 +1555,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1571,8 +1571,8 @@
                         <x>352</x>
                         <y>224</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1584,7 +1584,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1600,8 +1600,8 @@
                         <x>352</x>
                         <y>544</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1613,7 +1613,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1629,8 +1629,8 @@
                         <x>96</x>
                         <y>224</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1642,7 +1642,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1658,8 +1658,8 @@
                         <x>288</x>
                         <y>416</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1671,7 +1671,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1687,8 +1687,8 @@
                         <x>288</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1700,7 +1700,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1716,8 +1716,8 @@
                         <x>224</x>
                         <y>96</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1729,7 +1729,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1745,8 +1745,8 @@
                         <x>160</x>
                         <y>224</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1758,7 +1758,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1774,8 +1774,8 @@
                         <x>224</x>
                         <y>160</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1787,7 +1787,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1803,8 +1803,8 @@
                         <x>416</x>
                         <y>96</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1816,7 +1816,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1832,8 +1832,8 @@
                         <x>480</x>
                         <y>480</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1845,7 +1845,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1861,8 +1861,8 @@
                         <x>544</x>
                         <y>416</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1874,7 +1874,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1890,8 +1890,8 @@
                         <x>416</x>
                         <y>544</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1903,7 +1903,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1919,8 +1919,8 @@
                         <x>96</x>
                         <y>416</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1932,7 +1932,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1948,8 +1948,8 @@
                         <x>224</x>
                         <y>544</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1961,7 +1961,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -1977,8 +1977,8 @@
                         <x>224</x>
                         <y>480</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1990,7 +1990,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2006,8 +2006,8 @@
                         <x>160</x>
                         <y>416</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2019,7 +2019,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2035,8 +2035,8 @@
                         <x>288</x>
                         <y>480</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2048,7 +2048,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2064,8 +2064,8 @@
                         <x>352</x>
                         <y>480</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2077,7 +2077,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2093,8 +2093,8 @@
                         <x>352</x>
                         <y>416</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2106,7 +2106,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2122,8 +2122,8 @@
                         <x>416</x>
                         <y>416</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2135,7 +2135,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2151,8 +2151,8 @@
                         <x>416</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2164,7 +2164,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2180,8 +2180,8 @@
                         <x>416</x>
                         <y>288</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2193,7 +2193,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2209,8 +2209,8 @@
                         <x>416</x>
                         <y>224</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2222,7 +2222,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2238,8 +2238,8 @@
                         <x>416</x>
                         <y>160</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2251,7 +2251,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2267,8 +2267,8 @@
                         <x>544</x>
                         <y>224</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2280,7 +2280,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2296,8 +2296,8 @@
                         <x>544</x>
                         <y>288</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2309,7 +2309,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2325,8 +2325,8 @@
                         <x>480</x>
                         <y>288</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2338,7 +2338,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2354,8 +2354,8 @@
                         <x>544</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2367,7 +2367,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2383,8 +2383,8 @@
                         <x>96</x>
                         <y>288</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2396,7 +2396,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2412,8 +2412,8 @@
                         <x>96</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2425,7 +2425,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2441,8 +2441,8 @@
                         <x>160</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2454,7 +2454,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2470,8 +2470,8 @@
                         <x>160</x>
                         <y>288</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2483,7 +2483,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2499,8 +2499,8 @@
                         <x>224</x>
                         <y>288</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2512,7 +2512,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2528,8 +2528,8 @@
                         <x>288</x>
                         <y>288</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2541,7 +2541,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2557,8 +2557,8 @@
                         <x>288</x>
                         <y>224</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2570,7 +2570,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2586,8 +2586,8 @@
                         <x>288</x>
                         <y>160</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2599,7 +2599,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2615,8 +2615,8 @@
                         <x>288</x>
                         <y>96</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2628,7 +2628,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
@@ -2644,8 +2644,8 @@
                         <x>352</x>
                         <y>96</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>56</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2893,7 +2893,110 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="TextBackground9patch" uid="112">
+                    <properties>
+                        <left-margin>16</left-margin>
+                        <right-margin>16</right-margin>
+                        <top-margin>16</top-margin>
+                        <bottom-margin>16</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <hotspot>Center</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>323</x>
+                        <y>317.5</y>
+                        <z>0</z>
+                        <width>288</width>
+                        <height>160</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HudTextGameActive" uid="113">
+                    <properties>
+                        <text>Wanna pause? Press ESC!</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-12,400,0</font>
+                        <color>0,0,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>32</x>
+                        <y>576</y>
+                        <z>0</z>
+                        <width>288</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HudTextGamePaused" uid="111">
+                    <properties>
+                        <text>Have you finished to pee? Press ESC to resume!</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-12,400,0</font>
+                        <color>0,0,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Chicken" uid="114">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>320</y>
+                        <z>0</z>
+                        <width>126</width>
+                        <height>74</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.689189196</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Debug" sid="971714766885354">
