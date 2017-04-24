@@ -1178,6 +1178,12 @@
         <object-type name="Audio" sid="536379478622451">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="IntroTextPressEnter" sid="541171598009453">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="IntroTextPressSpaceBar" sid="323391554577955">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Player" plugin-id="Sprite" sid="914913287938903">
@@ -1213,6 +1219,13 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="TextMonkeyIsland" plugin-id="Text" sid="807337353064251">
+            <members>
+                <member>HudText</member>
+                <member>IntroTextPressEnter</member>
+                <member>IntroTextPressSpaceBar</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout>Intro.xml</layout>
@@ -1243,6 +1256,7 @@
     <sounds-folder />
     <music-folder>
         <file name="Monkey_Island_Intro_mp3cut_net_.ogg" />
+        <file name="14_-_Monkey_Island.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

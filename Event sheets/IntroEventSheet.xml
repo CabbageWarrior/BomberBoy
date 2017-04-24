@@ -3,6 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>IntroEventSheet</name>
     <events>
+        <variable constant="0" name="IsIntroFinished" sid="168868665143150" static="0" type="number">0</variable>
+        <variable constant="0" name="IsKeyPressed_Enter" sid="372328608831005" static="0" type="number">0</variable>
+        <variable constant="0" name="IsKeyPressed_Space" sid="651085303891008" static="0" type="number">0</variable>
+        <variable constant="0" name="IsRedirectInProgress" sid="341300423493763" static="0" type="number">0</variable>
         <event-block sid="808365640562484">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="488308379547529" type="System" />
@@ -11,10 +15,10 @@
                 <action id="0" name="Play" sid="433026948756296" type="Audio">
                     <param id="0" name="Audio file">Monkey_Island_Intro_mp3cut_net_</param>
                     <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-15</param>
                     <param id="1" name="Tag (optional)">&quot;Monkey Island Intro Music&quot;</param>
                 </action>
-                <action id="5" name="Set web font" sid="599616056751831" type="HudText">
+                <action id="5" name="Set web font" sid="599616056751831" type="TextMonkeyIsland">
                     <param id="0" name="Family name">&quot;monkey_island_1991_refinedRg&quot;</param>
                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                 </action>
@@ -43,6 +47,94 @@
                     <param id="0" name="State">0</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="644186302365070" type="TiledBackground2" />
+                <action id="-9" name="Set value" sid="435135239575886" type="System">
+                    <param id="0" name="Variable">IsIntroFinished</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="625124712396227">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="406255073119755" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="211287429889708" type="System">
+                    <param id="0" name="Variable">IsIntroFinished</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="486603666116944" type="System">
+                    <param id="0" name="Variable">IsKeyPressed_Enter</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="222508124098047" type="IntroTextPressEnter">
+                    <param id="0" name="Text">&quot;Ready to kill!&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="680613317990909" type="System">
+                    <param id="0" name="Variable">IsKeyPressed_Enter</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="314082666509265">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="954985337534150" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="778829980899924" type="System">
+                    <param id="0" name="Variable">IsIntroFinished</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="140632100087333" type="System">
+                    <param id="0" name="Variable">IsKeyPressed_Space</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="214697584172663" type="IntroTextPressSpaceBar">
+                    <param id="0" name="Text">&quot;Ready to rock!&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="518025666646759" type="System">
+                    <param id="0" name="Variable">IsKeyPressed_Space</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Check in the game can proceed.</comment>
+        <event-block sid="275250235850319">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="153038414254778" type="System">
+                    <param id="0" name="Variable">IsKeyPressed_Enter</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="164642095805049" type="System">
+                    <param id="0" name="Variable">IsKeyPressed_Space</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="523461293419793" type="System">
+                    <param id="0" name="Variable">IsRedirectInProgress</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="276892369114737" type="System">
+                    <param id="0" name="Variable">IsRedirectInProgress</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="150592115506834" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="642747673255142" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
             </actions>
         </event-block>
     </events>

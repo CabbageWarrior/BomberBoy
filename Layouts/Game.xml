@@ -2746,7 +2746,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>544</x>
-                        <y>96</y>
+                        <y>544</y>
                         <z>0</z>
                         <width>94.488098145</width>
                         <height>97.536094666</height>

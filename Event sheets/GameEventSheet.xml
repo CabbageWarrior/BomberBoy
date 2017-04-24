@@ -14,6 +14,7 @@
                 <condition id="-2" name="On start of layout" sid="200225782010636" type="System" />
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="425859391726562" type="Audio" />
                 <action id="5" name="Set frame" sid="621505487134241" type="Player">
                     <param id="0" name="Frame number">DIR_DOWN</param>
                 </action>
@@ -24,6 +25,12 @@
                 <action id="-10" name="Set value" sid="757374958490815" type="Player">
                     <param id="0" name="Instance variable">NextY</param>
                     <param id="1" name="Value">Self.Y</param>
+                </action>
+                <action id="0" name="Play" sid="884234037821487" type="Audio">
+                    <param id="0" name="Audio file">14_-_Monkey_Island</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;Monkey Island Game Music&quot;</param>
                 </action>
             </actions>
         </event-block>
