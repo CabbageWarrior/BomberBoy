@@ -19,7 +19,9 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
@@ -1563,6 +1565,77 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BadTentacle" sid="248739907885897">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pathfinding" sid="569863114631443">
+                        <behavior id="Pathfinding" />
+                    </behavior-type>
+                    <behavior-type name="8Direction" sid="770891873951626">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="787646340355790" speed="8">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.666667" original-source="C:\Users\dbga_53\Desktop\Kraken_Tentacle_noBG (1).png">
+                            <collision-poly>
+                                <point x="0.00555556" y="0.348148" />
+                                <point x="0.994444" y="0.348148" />
+                                <point x="0.994444" y="0.996296" />
+                                <point x="0.00555556" y="0.996296" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.666667" original-source="C:\Users\dbga_53\Desktop\Kraken_Tentacle_noBG (1).png">
+                            <collision-poly>
+                                <point x="0.00555556" y="0.348148" />
+                                <point x="0.994444" y="0.348148" />
+                                <point x="0.994444" y="0.996296" />
+                                <point x="0.00555556" y="0.996296" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.666667" original-source="C:\Users\dbga_53\Desktop\Kraken_Tentacle_noBG (1).png">
+                            <collision-poly>
+                                <point x="0.00555556" y="0.348148" />
+                                <point x="0.994444" y="0.348148" />
+                                <point x="0.994444" y="0.996296" />
+                                <point x="0.00555556" y="0.996296" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.666667" original-source="C:\Users\dbga_53\Desktop\Kraken_Tentacle_noBG (1).png">
+                            <collision-poly>
+                                <point x="0.00555556" y="0.348148" />
+                                <point x="0.994444" y="0.348148" />
+                                <point x="0.994444" y="0.996296" />
+                                <point x="0.00555556" y="0.996296" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.666667" original-source="C:\Users\dbga_53\Desktop\Kraken_Tentacle_noBG.png">
+                            <collision-poly>
+                                <point x="0.00555556" y="0.348148" />
+                                <point x="0.994444" y="0.348148" />
+                                <point x="0.994444" y="0.996296" />
+                                <point x="0.00555556" y="0.996296" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.666667" original-source="C:\Users\dbga_53\Desktop\Kraken_Tentacle_noBG.png">
+                            <collision-poly>
+                                <point x="0.00555556" y="0.348148" />
+                                <point x="0.994444" y="0.348148" />
+                                <point x="0.994444" y="0.996296" />
+                                <point x="0.00555556" y="0.996296" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BadTentacleDestination" sid="704293561241152">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="564389776459275" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
