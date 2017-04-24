@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>BomberBoy</name>
+    <name>BomberIsland</name>
     <description></description>
     <version>1.0.0.0</version>
     <author></author>
@@ -10,6 +10,7 @@
     <unique-id>3blxi9hzkyvjd</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
@@ -1174,6 +1175,9 @@
             <plugin id="NinePatch" />
             <texture />
         </object-type>
+        <object-type name="Audio" sid="536379478622451">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Player" plugin-id="Sprite" sid="914913287938903">
@@ -1221,9 +1225,25 @@
     <global-instances>
         <global-instance type="Keyboard" uid="90" />
         <global-instance type="FunctionManager" uid="92" />
+        <global-instance type="Audio" uid="100">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder />
-    <music-folder />
+    <music-folder>
+        <file name="Monkey_Island_Intro_mp3cut_net_.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

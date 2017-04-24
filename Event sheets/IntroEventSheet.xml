@@ -8,12 +8,18 @@
                 <condition id="-2" name="On start of layout" sid="488308379547529" type="System" />
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="433026948756296" type="Audio">
+                    <param id="0" name="Audio file">Monkey_Island_Intro_mp3cut_net_</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;Monkey Island Intro Music&quot;</param>
+                </action>
                 <action id="5" name="Set web font" sid="599616056751831" type="HudText">
                     <param id="0" name="Family name">&quot;monkey_island_1991_refinedRg&quot;</param>
                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="648917271332544" type="System">
-                    <param id="0" name="Seconds">2</param>
+                    <param id="0" name="Seconds">5</param>
                 </action>
                 <action behavior="SizeSine" id="0" name="Set active" sid="730323911910895" type="GameTitle">
                     <param id="0" name="State">1</param>

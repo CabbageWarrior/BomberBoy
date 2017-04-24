@@ -339,7 +339,7 @@
                                 <period-random>0</period-random>
                                 <period-offset>2</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>133</magnitude>
+                                <magnitude>173</magnitude>
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
@@ -347,7 +347,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>320</x>
+                        <x>360</x>
                         <y>320</y>
                         <z>0</z>
                         <width>563.374572754</width>
