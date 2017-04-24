@@ -2661,6 +2661,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Name>Guybrush</Name>
                         <Direction>-1</Direction>
                         <Speed>64</Speed>
                         <MoveTime>0.33</MoveTime>
@@ -2669,6 +2670,7 @@
                         <NextX>-1</NextX>
                         <NextY>-1</NextY>
                         <IsMoving>0</IsMoving>
+                        <DeadFrame>0</DeadFrame>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -2713,6 +2715,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Name>LeChuck</Name>
                         <Direction>-1</Direction>
                         <Speed>64</Speed>
                         <MoveTime>0.33</MoveTime>
@@ -2721,6 +2724,7 @@
                         <NextX>-1</NextX>
                         <NextY>-1</NextY>
                         <IsMoving>0</IsMoving>
+                        <DeadFrame>1</DeadFrame>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -2868,6 +2872,72 @@
                         <z>0</z>
                         <width>63.5</width>
                         <height>63.5</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerLeChuckDead" uid="125">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160</x>
+                        <y>-64</y>
+                        <z>0</z>
+                        <width>89.878929138</width>
+                        <height>68.35861969</height>
+                        <depth>0</depth>
+                        <hotspotX>0.507042229</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerGuybrushDead" uid="128">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>256</x>
+                        <y>-64</y>
+                        <z>0</z>
+                        <width>103.783248901</width>
+                        <height>78.933738708</height>
+                        <depth>0</depth>
+                        <hotspotX>0.507042229</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MegaExplosion" uid="129">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>448</x>
+                        <y>-160</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>256</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

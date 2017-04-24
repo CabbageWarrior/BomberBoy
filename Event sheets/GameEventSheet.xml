@@ -16,6 +16,14 @@
                 <condition id="-2" name="On start of layout" sid="200225782010636" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="869815144578542" type="System">
+                    <param id="0" name="Variable">IsGamePaused</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="309348742791505" type="System">
+                    <param id="0" name="Variable">IsIntroFinished</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="33" name="Stop all" sid="425859391726562" type="Audio" />
                 <action id="5" name="Set frame" sid="621505487134241" type="Player">
                     <param id="0" name="Frame number">DIR_DOWN</param>
@@ -137,11 +145,74 @@
                     <param id="0" name="Group name">&quot;BombActions&quot;</param>
                     <param id="1" name="State">0</param>
                 </action>
+                <action id="4" name="Set animation" sid="564736908951710" type="Player">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="321885184995493" type="Player">
+                    <param id="0" name="Frame number">Self.Direction</param>
+                </action>
                 <action id="-12" name="Set group active" sid="632369933467752" type="System">
                     <param id="0" name="Group name">&quot;PlayerActions&quot;</param>
                     <param id="1" name="State">0</param>
                 </action>
+                <action id="-16" name="Wait" sid="307877438783820" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block sid="478463400160197">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="880926189399014" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="237827803219396">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="454874222587175" type="Player">
+                                    <param id="0" name="Unique ID">PlayerGuybrush.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="590788023958511" type="System">
+                                    <param id="0" name="Layout">GameOverWinnerGuybrush</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="245762415489149">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="907949186104190" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="211837608837374" type="Player">
+                                    <param id="0" name="Unique ID">PlayerLeChuck.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="916836935338841" type="System">
+                                    <param id="0" name="Layout">GameOverWinnerLeChuck</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="862518349113874">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="426413678760367" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="611476845254141" type="System">
+                            <param id="0" name="Layout">GameOverAllDied</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="913861550985910">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="754924579587050" type="MegaExplosion" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="977808456357655" type="MegaExplosion" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="527473205940660" title="PlayerActions">
             <sub-events>
@@ -446,15 +517,71 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="212875879378807" type="Player" />
-                        <action id="-16" name="Wait" sid="267680075496058" type="System">
-                            <param id="0" name="Seconds">0.5</param>
+                        <action id="0" name="Spawn another object" sid="457571518656148" type="Player">
+                            <param id="0" name="Object">MegaExplosion</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-9" name="Set value" sid="495740029850425" type="System">
-                            <param id="0" name="Variable">IsGameFinished</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="0" name="Play" sid="285207526262675" type="Audio">
+                            <param id="0" name="Audio file">wormsnooo_lezt8l49</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Player dead&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="477402184886534" type="System">
+                            <param id="0" name="Seconds">2</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="292835401237486">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="791448852086145" type="Player">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Guybrush&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="463399844085884" type="Player">
+                                    <param id="0" name="Object">PlayerGuybrushDead</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="692069842157110" type="PlayerGuybrushDead" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="497904332424901">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="371938816741808" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="983262456509497" type="Player">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;LeChuck&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="898527674944463" type="Player">
+                                    <param id="0" name="Object">PlayerLeChuckDead</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="441429600356734" type="PlayerLeChuckDead" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="449915427099851">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Destroy" sid="212875879378807" type="Player" />
+                                <action id="-16" name="Wait" sid="267680075496058" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="495740029850425" type="System">
+                                    <param id="0" name="Variable">IsGameFinished</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="912475081186308">
                     <conditions>
@@ -707,6 +834,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="692050454007053" type="Audio">
+                            <param id="0" name="Audio file">Molotov_Cocktail_Bomb-SoundBible_com-547160811_mp3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Bomb Exploded&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="723416814663468" type="FunctionManager">
                             <param id="0" name="Name">&quot;CreateFireIfPossible&quot;</param>
                             <param id="1" name="Parameter {n}">BombPlaceholder.X{###}BombPlaceholder.Y</param>

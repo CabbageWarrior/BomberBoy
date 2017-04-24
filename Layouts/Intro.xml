@@ -54,7 +54,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Game" sid="103285815664866">
+        <layer name="IntroItems" sid="103285815664866">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -120,7 +120,7 @@
                 </instance>
                 <instance type="HudText" uid="98">
                     <properties>
-                        <text>A long time ago in a galaxy far, far away, peace, love and a three-headed monkey were the most powerful entities in Monkey Island. But a bad day, the pirate Le Chuck, dead from about three days, became a zombie and began to scary Monkey Island, the entire population and the three-headed monkey. Can our hero Guybrush save the situation one more time? Or will Le Chuck take the ownership of Monkey Island?</text>
+                        <text>A long time ago in a galaxy far, far away, peace, love and a three-headed monkey were the most powerful entities in Monkey Island. But a bad day, the pirate LeChuck, dead from about three days, became a zombie and began to scary Monkey Island, the entire population and the three-headed monkey. Can our hero Guybrush save the situation one more time? Or will LeChuck take the ownership of Monkey Island?</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-12,400,0</font>
                         <color>0,102,0</color>
@@ -240,7 +240,7 @@
                 </instance>
                 <instance type="HudText" uid="105">
                     <properties>
-                        <text>I&apos;m the dead zombie pirate Le Chuck! I use Arrow Keys and Enter!</text>
+                        <text>I&apos;m the dead zombie pirate LeChuck! I use Arrow Keys and Enter!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-13.6,400,0</font>
                         <color>255,255,255</color>
@@ -254,10 +254,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>484</x>
-                        <y>269</y>
+                        <y>253.298034668</y>
                         <z>0</z>
-                        <width>161</width>
-                        <height>153</height>
+                        <width>155.214782715</width>
+                        <height>168.701965332</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
