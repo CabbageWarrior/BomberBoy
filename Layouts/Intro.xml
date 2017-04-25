@@ -267,9 +267,9 @@
                 </instance>
                 <instance type="IntroTextPressEnter" uid="109">
                     <properties>
-                        <text>Press Enter!</text>
+                        <text>Multiplayer? Press Enter!</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <font>Arial,-10.4,400,0</font>
                         <color>255,255,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -294,9 +294,9 @@
                 </instance>
                 <instance type="IntroTextPressSpaceBar" uid="110">
                     <properties>
-                        <text>Press Space Bar!</text>
+                        <text>Multiplayer? Press Space Bar!</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <font>Arial,-10.4,400,0</font>
                         <color>255,255,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -307,10 +307,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>380</x>
+                        <x>342</x>
                         <y>588</y>
                         <z>0</z>
-                        <width>132</width>
+                        <width>170</width>
                         <height>52</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -337,6 +337,33 @@
                         <depth>0</depth>
                         <hotspotX>0.686274529</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HudText" uid="224">
+                    <properties>
+                        <text>Single Player? Press S!</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-10.4,400,0</font>
+                        <color>255,255,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-38</x>
+                        <y>596</y>
+                        <z>0</z>
+                        <width>325</width>
+                        <height>35</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

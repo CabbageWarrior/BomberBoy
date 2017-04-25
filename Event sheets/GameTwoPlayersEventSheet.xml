@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>GameEventSheet</name>
+    <name>GameTwoPlayersEventSheet</name>
     <events>
         <variable comment="Not moving." constant="1" name="DIR_NONE" sid="123122657249812" static="0" type="number">-1</variable>
         <variable comment="Right Direction Angle." constant="1" name="DIR_RIGHT" sid="7990774981750296" static="0" type="number">0</variable>
@@ -21,7 +21,7 @@
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="-9" name="Set value" sid="309348742791505" type="System">
-                    <param id="0" name="Variable">IsIntroFinished</param>
+                    <param id="0" name="Variable">IsGameFinished</param>
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="33" name="Stop all" sid="425859391726562" type="Audio" />
@@ -160,74 +160,100 @@
                     <param id="0" name="Group name">&quot;BombActions&quot;</param>
                     <param id="1" name="State">0</param>
                 </action>
-                <action id="4" name="Set animation" sid="564736908951710" type="Player">
-                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="5" name="Set frame" sid="321885184995493" type="Player">
-                    <param id="0" name="Frame number">Self.Direction</param>
-                </action>
                 <action id="-12" name="Set group active" sid="632369933467752" type="System">
                     <param id="0" name="Group name">&quot;PlayerActions&quot;</param>
                     <param id="1" name="State">0</param>
                 </action>
-                <action id="-16" name="Wait" sid="307877438783820" type="System">
-                    <param id="0" name="Seconds">5</param>
-                </action>
             </actions>
             <sub-events>
-                <event-block sid="478463400160197">
+                <event-block sid="860311894354146">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="880926189399014" type="Player" />
+                        <condition id="-11" name="For Each" sid="475532930419278" type="System">
+                            <param id="0" name="Object">BadTentacle</param>
+                        </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="388733145427143" type="BadTentacle" />
+                    </actions>
+                </event-block>
+                <event-block sid="349143838568708">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="547428122889435" type="System">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="787861348693455" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="915193620489583" type="Player">
+                            <param id="0" name="Frame number">Self.Direction</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="443346533982568">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="869965117537229" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="237827803219396">
+                        <event-block sid="478463400160197">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="454874222587175" type="Player">
-                                    <param id="0" name="Unique ID">PlayerGuybrush.UID</param>
-                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="880926189399014" type="Player" />
                             </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="590788023958511" type="System">
-                                    <param id="0" name="Layout">GameOverWinnerGuybrush</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="237827803219396">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="454874222587175" type="Player">
+                                            <param id="0" name="Unique ID">PlayerGuybrush.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="590788023958511" type="System">
+                                            <param id="0" name="Layout">GameOverWinnerGuybrush</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="245762415489149">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="907949186104190" type="System" />
+                                        <condition id="-14" name="Pick by unique ID" sid="211837608837374" type="Player">
+                                            <param id="0" name="Unique ID">PlayerLeChuck.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="916836935338841" type="System">
+                                            <param id="0" name="Layout">GameOverWinnerLeChuck</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="245762415489149">
+                        <event-block sid="862518349113874">
                             <conditions>
-                                <condition id="-22" name="Else" sid="907949186104190" type="System" />
-                                <condition id="-14" name="Pick by unique ID" sid="211837608837374" type="Player">
-                                    <param id="0" name="Unique ID">PlayerLeChuck.UID</param>
-                                </condition>
+                                <condition id="-22" name="Else" sid="426413678760367" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-2" name="Go to layout" sid="916836935338841" type="System">
-                                    <param id="0" name="Layout">GameOverWinnerLeChuck</param>
+                                <action id="-2" name="Go to layout" sid="611476845254141" type="System">
+                                    <param id="0" name="Layout">GameOverAllDied</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="862518349113874">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="426413678760367" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="611476845254141" type="System">
-                            <param id="0" name="Layout">GameOverAllDied</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="913861550985910">
-                    <conditions>
-                        <condition id="5" name="On any finished" sid="754924579587050" type="MegaExplosion" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="977808456357655" type="MegaExplosion" />
-                    </actions>
-                </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="913861550985910">
+            <conditions>
+                <condition id="5" name="On any finished" sid="754924579587050" type="MegaExplosion" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="977808456357655" type="MegaExplosion" />
+            </actions>
         </event-block>
         <event-group description="" sid="527473205940660" title="PlayerActions">
             <sub-events>
@@ -532,68 +558,24 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="457571518656148" type="Player">
-                            <param id="0" name="Object">MegaExplosion</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="0" name="Play" sid="285207526262675" type="Audio">
-                            <param id="0" name="Audio file">wormsnooo_lezt8l49</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Player dead&quot;</param>
+                        <action id="0" name="Call function" sid="816460205693090" type="FunctionManager">
+                            <param id="0" name="Name">&quot;PlayerDies&quot;</param>
+                            <param id="1" name="Parameter {n}">Player.UID{###}1</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="292835401237486">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="791448852086145" type="Player">
-                                    <param id="0" name="Instance variable">Name</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Guybrush&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="463399844085884" type="Player">
-                                    <param id="0" name="Object">PlayerGuybrushDead</param>
-                                    <param id="1" name="Layer">1</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-25" name="Move to bottom" sid="692069842157110" type="PlayerGuybrushDead" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="497904332424901">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="371938816741808" type="System" />
-                                <condition id="-7" name="Compare instance variable" sid="983262456509497" type="Player">
-                                    <param id="0" name="Instance variable">Name</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;LeChuck&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="898527674944463" type="Player">
-                                    <param id="0" name="Object">PlayerLeChuckDead</param>
-                                    <param id="1" name="Layer">1</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-25" name="Move to bottom" sid="441429600356734" type="PlayerLeChuckDead" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="449915427099851">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Destroy" sid="212875879378807" type="Player" />
-                                <action id="-16" name="Wait" sid="477402184886534" type="System">
-                                    <param id="0" name="Seconds">2</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="495740029850425" type="System">
-                                    <param id="0" name="Variable">IsGameFinished</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                </event-block>
+                <event-block sid="468366876359500">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="875360325758110" type="Player">
+                            <param id="0" name="Object">BadTentacle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="801871874929929" type="FunctionManager">
+                            <param id="0" name="Name">&quot;PlayerDies&quot;</param>
+                            <param id="1" name="Parameter {n}">Player.UID{###}0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="912475081186308">
                     <conditions>
@@ -1504,37 +1486,150 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="546582101624823">
+                    <conditions>
+                        <condition id="0" name="On function" sid="946045885304772" type="FunctionManager">
+                            <param id="0" name="Name">&quot;PlayerDies&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="773934960661587" type="Player">
+                            <param id="0" name="Unique ID">FunctionManager.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="841579122067524" type="Audio">
+                            <param id="0" name="Audio file">wormsnooo_lezt8l49</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Player dead&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="561610601216283">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="963881852984757" type="FunctionManager">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="368641377177602" type="Player">
+                                    <param id="0" name="Object">MegaExplosion</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="788091408550315">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="805927289334602" type="Player">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Guybrush&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="128785979797003" type="Player">
+                                    <param id="0" name="Object">PlayerGuybrushDead</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="923838092838483" type="PlayerGuybrushDead" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="236567499587083">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="575978424416467" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="939341957406486" type="Player">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;LeChuck&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="878470522944969" type="Player">
+                                    <param id="0" name="Object">PlayerLeChuckDead</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="500416962974851" type="PlayerLeChuckDead" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="695672541889064">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Destroy" sid="277952000609558" type="Player" />
+                                <action id="-16" name="Wait" sid="843691565624465" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="834425487461021" type="System">
+                                    <param id="0" name="Variable">IsGameFinished</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="471315769914527">
-            <conditions>
-                <condition behavior="Pathfinding" id="0" name="On path found" sid="839315562302094" type="BadTentacle" />
-            </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="831395572895546" type="BadTentacle" />
-            </actions>
-        </event-block>
-        <event-block sid="582312055843356">
-            <conditions>
-                <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="832593597534702" type="BadTentacle" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="509210726807352" type="FunctionManager">
-                    <param id="0" name="Name">&quot;BadTentaclePickDestination&quot;</param>
-                    <param id="1" name="Parameter {n}">BadTentacle.UID</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="961818821637218">
-            <conditions>
-                <condition behavior="Pathfinding" id="5" name="On arrived" sid="839672551340303" type="BadTentacle" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="604449336876824" type="FunctionManager">
-                    <param id="0" name="Name">&quot;BadTentaclePickDestination&quot;</param>
-                    <param id="1" name="Parameter {n}">BadTentacle.UID</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="394828649359214" title="BadTentaclesActions">
+            <sub-events>
+                <event-block sid="471315769914527">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="839315562302094" type="BadTentacle" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="831395572895546" type="BadTentacle" />
+                    </actions>
+                </event-block>
+                <event-block sid="582312055843356">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="832593597534702" type="BadTentacle" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="509210726807352" type="FunctionManager">
+                            <param id="0" name="Name">&quot;BadTentaclePickDestination&quot;</param>
+                            <param id="1" name="Parameter {n}">BadTentacle.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="961818821637218">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="839672551340303" type="BadTentacle" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="604449336876824" type="FunctionManager">
+                            <param id="0" name="Name">&quot;BadTentaclePickDestination&quot;</param>
+                            <param id="1" name="Parameter {n}">BadTentacle.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="683309839931065">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="986262491418669" type="BadTentacle">
+                            <param id="0" name="Object">Fire</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="878619339204483" type="BadTentacle" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="249010004458681" type="BadTentacle" />
+                    </actions>
+                </event-block>
+                <event-block sid="386399807749884">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="632600016983960" type="BadTentacle">
+                            <param id="0" name="Object">BombPlaceholder</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="987280688737002" type="BadTentacle" />
+                        <action id="0" name="Call function" sid="756655851738594" type="FunctionManager">
+                            <param id="0" name="Name">&quot;BadTentaclePickDestination&quot;</param>
+                            <param id="1" name="Parameter {n}">BadTentacle.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

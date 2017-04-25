@@ -6,6 +6,7 @@
         <variable constant="0" name="IsIntroFinished" sid="168868665143150" static="0" type="number">0</variable>
         <variable constant="0" name="IsKeyPressed_Enter" sid="372328608831005" static="0" type="number">0</variable>
         <variable constant="0" name="IsKeyPressed_Space" sid="651085303891008" static="0" type="number">0</variable>
+        <variable constant="0" name="IsKeyPressed_S" sid="836829452889833" static="0" type="number">0</variable>
         <variable constant="0" name="IsRedirectInProgress" sid="341300423493763" static="0" type="number">0</variable>
         <event-block sid="808365640562484">
             <conditions>
@@ -85,6 +86,11 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="107604752906600" type="System">
+                    <param id="0" name="Variable">IsRedirectInProgress</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="222508124098047" type="IntroTextPressEnter">
@@ -111,6 +117,11 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="118634553676723" type="System">
+                    <param id="0" name="Variable">IsRedirectInProgress</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="214697584172663" type="IntroTextPressSpaceBar">
@@ -119,6 +130,40 @@
                 <action id="-9" name="Set value" sid="518025666646759" type="System">
                     <param id="0" name="Variable">IsKeyPressed_Space</param>
                     <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="833174041018617">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="764527756291000" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="906835649082246" type="System">
+                    <param id="0" name="Variable">IsIntroFinished</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="284560035501445" type="System">
+                    <param id="0" name="Variable">IsKeyPressed_S</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="526898557166364" type="System">
+                    <param id="0" name="Variable">IsRedirectInProgress</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="707993041317833" type="System">
+                    <param id="0" name="Variable">IsKeyPressed_S</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="839716793794272" type="IntroTextPressEnter">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="990318700212584" type="IntroTextPressSpaceBar">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
@@ -150,7 +195,33 @@
                     <param id="0" name="Seconds">2</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="642747673255142" type="System">
-                    <param id="0" name="Layout">Game</param>
+                    <param id="0" name="Layout">GameTwoPlayers</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="300060320653348">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="410186597656093" type="System">
+                    <param id="0" name="Variable">IsKeyPressed_S</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="395679738985791" type="System">
+                    <param id="0" name="Variable">IsRedirectInProgress</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="766345877528768" type="System">
+                    <param id="0" name="Variable">IsRedirectInProgress</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="685875456045304" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="411937788935608" type="System">
+                    <param id="0" name="Layout">GameSinglePlayer</param>
                 </action>
             </actions>
         </event-block>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameGlobalEventSheet</name>
+    <events>
+        <variable comment="Not moving." constant="1" name="DIR_NONE" sid="981763287136487" static="0" type="number">-1</variable>
+        <variable comment="Right Direction Angle." constant="1" name="DIR_RIGHT" sid="294165779318206" static="0" type="number">0</variable>
+        <variable comment="Down Direction Angle." constant="1" name="DIR_DOWN" sid="179691450297880" static="0" type="number">1</variable>
+        <variable comment="Left Direction Angle." constant="1" name="DIR_LEFT" sid="411725631462862" static="0" type="number">2</variable>
+        <variable comment="Up Direction Angle." constant="1" name="DIR_UP" sid="597062222276464" static="0" type="number">3</variable>
+        <variable constant="1" name="GRID_CELL_DIMENSION" sid="920557365824128" static="0" type="number">64</variable>
+        <variable constant="0" name="IsGamePaused" sid="726226886927593" static="0" type="number">0</variable>
+        <variable constant="0" name="IsGameFinished" sid="315852916981650" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>

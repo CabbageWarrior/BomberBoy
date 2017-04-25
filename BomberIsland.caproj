@@ -19,7 +19,6 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -1575,8 +1574,11 @@
                     <behavior-type name="Pathfinding" sid="569863114631443">
                         <behavior id="Pathfinding" />
                     </behavior-type>
-                    <behavior-type name="8Direction" sid="770891873951626">
-                        <behavior id="EightDir" />
+                    <behavior-type name="Fade" sid="997836312469586">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="420787247568979">
+                        <behavior id="solid" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -1754,15 +1756,17 @@
     </families>
     <layout-folder>
         <layout>Intro.xml</layout>
-        <layout>Game.xml</layout>
+        <layout>GameSinglePlayer.xml</layout>
+        <layout>GameTwoPlayers.xml</layout>
         <layout>GameOverWinnerGuybrush.xml</layout>
         <layout>GameOverWinnerLeChuck.xml</layout>
         <layout>GameOverAllDied.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>GameEventSheet.xml</event-sheet>
+        <event-sheet>GameTwoPlayersEventSheet.xml</event-sheet>
         <event-sheet>IntroEventSheet.xml</event-sheet>
         <event-sheet>GameOverEventSheet.xml</event-sheet>
+        <event-sheet>GameSinglePlayerEventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="90" />
