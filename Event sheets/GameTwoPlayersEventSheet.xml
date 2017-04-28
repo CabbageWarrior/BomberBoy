@@ -46,6 +46,14 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;Monkey Island Game Music&quot;</param>
                 </action>
+                <action id="-12" name="Set group active" sid="552446806221983" type="System">
+                    <param id="0" name="Group name">&quot;BombActions&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="365755347438803" type="System">
+                    <param id="0" name="Group name">&quot;PlayerActions&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="177222021131329">
